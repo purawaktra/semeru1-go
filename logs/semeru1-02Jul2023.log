@@ -1,0 +1,146 @@
+{"time":"2023-07-02 10:32:10","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-02 10:32:10","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-02 10:32:10","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-02 10:32:13","message":"=== New Request ==="}
+{"level":"info","time":"2023-07-02 10:32:13","message":"=== New SelectCityById Query ==="}
+{"time":"2023-07-02 10:38:20","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-02 10:38:20","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-02 10:38:20","message":"App Address = localhost:7716"}
+{"time":"2023-07-02 10:40:20","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-02 10:40:20","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-02 10:40:20","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-02 10:40:24","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"123abc","data":{"city_id":2,"limit":1}},"time":"2023-07-02 10:40:24"}
+{"level":"info","time":"2023-07-02 10:40:24","message":"=== New SelectCityById Query ==="}
+{"level":"debug","function":"SelectCityById","message":{"CityId":2,"Name":"","Province":0},"time":"2023-07-02 10:40:24"}
+{"time":"2023-07-02 10:51:48","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-02 10:51:48","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-02 10:51:48","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-02 10:52:02","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"123abc","data":{"city_id":2,"limit":1}},"time":"2023-07-02 10:52:02"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-02 10:52:02"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":2,"Name":"","Province":0},"time":"2023-07-02 10:52:02"}
+{"time":"2023-07-02 10:58:15","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-02 10:58:15","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-02 10:58:15","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-02 10:58:24","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"123abc","data":{"city_id":2,"limit":1}},"time":"2023-07-02 10:58:24"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-02 10:58:24"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":2,"Name":"","Province":0},"time":"2023-07-02 10:58:24"}
+{"level":"info","time":"2023-07-02 10:58:32","message":"=== New Request ==="}
+{"level":"error","error":"invalid character ',' looking for beginning of value","function":"SelectCityById","message":"","caller":"D:/databx/semeru1-go/utils/logs.go:71","time":"2023-07-02 10:58:32"}
+{"time":"2023-07-02 10:59:26","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-02 10:59:26","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-02 10:59:26","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-02 10:59:37","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"123abc","data":{"city_id":10,"limit":1}},"time":"2023-07-02 10:59:37"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-02 10:59:37"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":10,"Name":"","Province":0},"time":"2023-07-02 10:59:37"}
+{"level":"info","time":"2023-07-02 10:59:42","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"123abc","data":{"city_id":11,"limit":1}},"time":"2023-07-02 10:59:42"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-02 10:59:42"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":11,"Name":"","Province":0},"time":"2023-07-02 10:59:42"}
+{"time":"2023-07-02 11:13:08","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-02 11:13:08","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-02 11:13:08","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-02 11:14:12","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByName","message":{"request_id":"123abc","data":{"city_id":11,"limit":1}},"time":"2023-07-02 11:14:12"}
+{"level":"error","error":"city name can not be empty","function":"SelectCityByName","message":"","time":"2023-07-02 11:14:12"}
+{"level":"error","error":"city name can not be empty","function":"SelectCityByName","message":{"city_id":11,"city_name":"","city_province":0,"limit":1,"offset":0},"time":"2023-07-02 11:14:12"}
+{"level":"error","error":"city name can not be empty","function":"SelectCityByName","message":"","time":"2023-07-02 11:14:12"}
+{"level":"info","time":"2023-07-02 11:16:47","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByName","message":{"request_id":"123abc","data":{"city_id":11,"limit":1}},"time":"2023-07-02 11:16:47"}
+{"level":"error","error":"city name can not be empty","function":"SelectCityByName","message":"","time":"2023-07-02 11:16:47"}
+{"level":"error","error":"city name can not be empty","function":"SelectCityByName","message":{"city_id":11,"city_name":"","city_province":0,"limit":1,"offset":0},"time":"2023-07-02 11:16:47"}
+{"level":"error","error":"city name can not be empty","function":"SelectCityByName","message":"","time":"2023-07-02 11:16:47"}
+{"level":"info","time":"2023-07-02 11:17:11","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByName","message":{"request_id":"123abc","data":{"city_id":11,"limit":1}},"time":"2023-07-02 11:17:11"}
+{"level":"error","error":"city name can not be empty","function":"SelectCityByName","message":"","time":"2023-07-02 11:17:11"}
+{"level":"error","error":"city name can not be empty","function":"SelectCityByName","message":{"city_id":11,"city_name":"","city_province":0,"limit":1,"offset":0},"time":"2023-07-02 11:17:14"}
+{"level":"error","error":"city name can not be empty","function":"SelectCityByName","message":"","time":"2023-07-02 11:17:17"}
+{"level":"info","time":"2023-07-02 11:18:24","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"123abc","data":{"city_id":11,"limit":1}},"time":"2023-07-02 11:18:24"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-02 11:18:24"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":11,"Name":"","Province":0},"time":"2023-07-02 11:18:24"}
+{"level":"info","time":"2023-07-02 11:18:30","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"123abc","data":{"city_id":"","limit":1}},"time":"2023-07-02 11:18:30"}
+{"level":"error","error":"json: cannot unmarshal string into Go struct field RequestCity.city_id of type int","function":"SelectCityById","message":{"city_id":0,"city_name":"","city_province":0,"limit":1,"offset":0},"time":"2023-07-02 11:18:30"}
+{"level":"error","error":"json: cannot unmarshal string into Go struct field RequestCity.city_id of type int","function":"SelectCityById","message":"","time":"2023-07-02 11:18:30"}
+{"time":"2023-07-02 11:20:01","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-02 11:20:01","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-02 11:20:01","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-02 11:20:03","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"123abc","data":{"city_id":"","limit":1}},"time":"2023-07-02 11:20:03"}
+{"level":"error","error":"json: cannot unmarshal string into Go struct field RequestCity.city_id of type int","function":"SelectCityById","message":{"city_id":0,"city_name":"","city_province":0,"limit":1,"offset":0},"time":"2023-07-02 11:20:03"}
+{"level":"error","error":"json: cannot unmarshal string into Go struct field RequestCity.city_id of type int","function":"SelectCityById","message":"","time":"2023-07-02 11:20:03"}
+{"time":"2023-07-02 11:21:32","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-02 11:21:32","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-02 11:21:32","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-02 11:21:35","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"123abc","data":{"city_id":"","limit":1}},"time":"2023-07-02 11:21:35"}
+{"level":"error","error":"json: cannot unmarshal string into Go struct field RequestCity.city_id of type int","function":"SelectCityById","message":{"city_id":0,"city_name":"","city_province":0,"limit":1,"offset":0},"time":"2023-07-02 11:21:35"}
+{"level":"error","error":"json: cannot unmarshal string into Go struct field RequestCity.city_id of type int","function":"SelectCityById","message":"","time":"2023-07-02 11:21:35"}
+{"level":"info","time":"2023-07-02 11:21:42","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByName","message":{"request_id":"123abc","data":{"city_id":"","limit":1}},"time":"2023-07-02 11:21:42"}
+{"level":"error","error":"json: cannot unmarshal string into Go struct field RequestCity.city_id of type int","function":"SelectCityByName","message":{"city_id":0,"city_name":"","city_province":0,"limit":1,"offset":0},"time":"2023-07-02 11:21:42"}
+{"level":"error","error":"json: cannot unmarshal string into Go struct field RequestCity.city_id of type int","function":"SelectCityByName","message":"","time":"2023-07-02 11:21:42"}
+{"level":"info","time":"2023-07-02 11:21:44","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByName","message":{"request_id":"123abc","data":{"city_id":"","limit":1}},"time":"2023-07-02 11:21:44"}
+{"level":"error","error":"json: cannot unmarshal string into Go struct field RequestCity.city_id of type int","function":"SelectCityByName","message":{"city_id":0,"city_name":"","city_province":0,"limit":1,"offset":0},"time":"2023-07-02 11:21:44"}
+{"level":"error","error":"json: cannot unmarshal string into Go struct field RequestCity.city_id of type int","function":"SelectCityByName","message":"","time":"2023-07-02 11:21:44"}
+{"level":"info","time":"2023-07-02 11:21:51","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByName","message":{"request_id":"123abc","data":{"city_id":1,"limit":1}},"time":"2023-07-02 11:21:51"}
+{"level":"error","error":"city name can not be empty","function":"SelectCityByName","message":"","time":"2023-07-02 11:21:51"}
+{"level":"error","error":"city name can not be empty","function":"SelectCityByName","message":{"city_id":1,"city_name":"","city_province":0,"limit":1,"offset":0},"time":"2023-07-02 11:21:59"}
+{"level":"error","error":"city name can not be empty","function":"SelectCityByName","message":"","time":"2023-07-02 11:21:59"}
+{"level":"info","time":"2023-07-02 11:22:33","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByName","message":{"request_id":"123abc","data":{"city_name":"surabaya","limit":1}},"time":"2023-07-02 11:22:33"}
+{"level":"debug","function":"SelectCityByName","message":"=== New Query ===","time":"2023-07-02 11:22:33"}
+{"level":"debug","function":"SelectCityByName","message":{"CityId":0,"Name":"surabaya","Province":0},"time":"2023-07-02 11:22:33"}
+{"level":"error","error":"Error 1054 (42S22): Unknown column 'surabaya' in 'where clause'","function":"SelectCityByName","message":{"CityId":0,"Name":"surabaya","Province":0},"time":"2023-07-02 11:22:33"}
+{"level":"error","error":"error call usecase","function":"SelectCityByName","message":{"CityId":0,"Name":"surabaya","Province":0},"time":"2023-07-02 11:22:33"}
+{"level":"error","error":"Error 1054 (42S22): Unknown column 'surabaya' in 'where clause'","function":"SelectCityByName","message":{"city_id":0,"city_name":"surabaya","city_province":0,"limit":1,"offset":0},"time":"2023-07-02 11:22:33"}
+{"level":"error","error":"Error 1054 (42S22): Unknown column 'surabaya' in 'where clause'","function":"SelectCityByName","message":"","time":"2023-07-02 11:22:33"}
+{"time":"2023-07-02 11:23:58","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-02 11:23:58","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-02 11:23:58","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-02 11:24:00","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByName","message":{"request_id":"123abc","data":{"city_name":"surabaya","limit":1}},"time":"2023-07-02 11:24:00"}
+{"level":"debug","function":"SelectCityByName","message":"=== New Query ===","time":"2023-07-02 11:24:00"}
+{"level":"debug","function":"SelectCityByName","message":{"CityId":0,"Name":"surabaya","Province":0},"time":"2023-07-02 11:24:00"}
+{"level":"info","time":"2023-07-02 11:24:33","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByProvince","message":{"request_id":"123abc","data":{"city_name":"surabaya","limit":1}},"time":"2023-07-02 11:24:33"}
+{"level":"error","error":"province name can not be zero or negative","function":"SelectCityByProvince","message":{"city_id":0,"city_name":"surabaya","city_province":0,"limit":1,"offset":0},"time":"2023-07-02 11:24:33"}
+{"level":"error","error":"province name can not be zero or negative","function":"SelectCityByProvince","message":"","time":"2023-07-02 11:24:33"}
+{"level":"info","time":"2023-07-02 11:25:34","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByProvince","message":{"request_id":"123abc","data":{"city_province":1,"limit":1}},"time":"2023-07-02 11:25:34"}
+{"level":"debug","function":"SelectCityByProvince","message":"=== New Query ===","time":"2023-07-02 11:25:34"}
+{"level":"debug","function":"SelectCityByProvince","message":{"CityId":0,"Name":"","Province":1},"time":"2023-07-02 11:25:34"}
+{"level":"info","time":"2023-07-02 11:25:39","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByProvince","message":{"request_id":"123abc","data":{"city_province":11,"limit":1}},"time":"2023-07-02 11:25:39"}
+{"level":"debug","function":"SelectCityByProvince","message":"=== New Query ===","time":"2023-07-02 11:25:39"}
+{"level":"debug","function":"SelectCityByProvince","message":{"CityId":0,"Name":"","Province":11},"time":"2023-07-02 11:25:39"}
+{"level":"info","time":"2023-07-02 11:25:45","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByProvince","message":{"request_id":"123abc","data":{"city_province":11,"limit":10}},"time":"2023-07-02 11:25:45"}
+{"level":"debug","function":"SelectCityByProvince","message":"=== New Query ===","time":"2023-07-02 11:25:45"}
+{"level":"debug","function":"SelectCityByProvince","message":{"CityId":0,"Name":"","Province":11},"time":"2023-07-02 11:25:45"}
+{"level":"info","time":"2023-07-02 11:25:53","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByProvince","message":{"request_id":"123abc","data":{"city_province":11,"limit":100}},"time":"2023-07-02 11:25:53"}
+{"level":"debug","function":"SelectCityByProvince","message":"=== New Query ===","time":"2023-07-02 11:25:53"}
+{"level":"debug","function":"SelectCityByProvince","message":{"CityId":0,"Name":"","Province":11},"time":"2023-07-02 11:25:53"}
+{"level":"info","time":"2023-07-02 11:26:01","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByProvince","message":{"request_id":"123abc","data":{"city_province":11,"limit":100}},"time":"2023-07-02 11:26:01"}
+{"level":"debug","function":"SelectCityByProvince","message":"=== New Query ===","time":"2023-07-02 11:26:01"}
+{"level":"debug","function":"SelectCityByProvince","message":{"CityId":0,"Name":"","Province":11},"time":"2023-07-02 11:26:01"}
+{"level":"info","time":"2023-07-02 11:26:02","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByProvince","message":{"request_id":"123abc","data":{"city_province":11,"limit":100}},"time":"2023-07-02 11:26:02"}
+{"level":"debug","function":"SelectCityByProvince","message":"=== New Query ===","time":"2023-07-02 11:26:02"}
+{"level":"debug","function":"SelectCityByProvince","message":{"CityId":0,"Name":"","Province":11},"time":"2023-07-02 11:26:02"}
+{"level":"info","time":"2023-07-02 11:26:03","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByProvince","message":{"request_id":"123abc","data":{"city_province":11,"limit":100}},"time":"2023-07-02 11:26:03"}
+{"level":"debug","function":"SelectCityByProvince","message":"=== New Query ===","time":"2023-07-02 11:26:03"}
+{"level":"debug","function":"SelectCityByProvince","message":{"CityId":0,"Name":"","Province":11},"time":"2023-07-02 11:26:03"}
+{"level":"info","time":"2023-07-02 11:26:03","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByProvince","message":{"request_id":"123abc","data":{"city_province":11,"limit":100}},"time":"2023-07-02 11:26:03"}
+{"level":"debug","function":"SelectCityByProvince","message":"=== New Query ===","time":"2023-07-02 11:26:03"}
+{"level":"debug","function":"SelectCityByProvince","message":{"CityId":0,"Name":"","Province":11},"time":"2023-07-02 11:26:03"}

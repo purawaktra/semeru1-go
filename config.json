@@ -1,0 +1,20 @@
+{
+  "app": {
+    "name": "semeru1",
+    "host": "localhost",
+    "port": "7716",
+    "environment": "development",
+    "log": {
+      "level": "0"
+    }
+  },
+  "database":{
+    "mysql": {
+      "host": "localhost",
+      "port": "3306",
+      "schema": "semeru1",
+      "user": "semeru1",
+      "password": "Iz0MPMBcp96l3AuZd6Sny5Zj"
+    }
+  }
+}
