@@ -7,6 +7,17 @@ import (
 	"github.com/purawaktra/semeru1-go/utils"
 )
 
+// @BasePath /api/v1
+
+// PingExample godoc
+// @Summary ping example
+// @Schemes
+// @Description do ping
+// @Tags example
+// @Accept json
+// @Produce json
+// @Success 200 {string} Helloworld
+// @Router /example/helloworld [get]
 func main() {
 	utils.InitConfig()
 	utils.InitLog()
@@ -40,6 +51,10 @@ func main() {
 
 	utils.Log("============= SEMERU1 ENGINE STARTING =============")
 	utils.Log(fmt.Sprintf("App Address = %s:%s", utils.AppHost, utils.AppPort))
+
+	// init routing to swagger
+	swaggerRouter := utils.CreateSwaggerRouter(engine)
+	swaggerRouter.Init("/semeru1/api/v1/swagger")
 
 	// start http api engine
 	err = engine.Run(fmt.Sprintf("%s:%s", utils.AppHost, utils.AppPort))

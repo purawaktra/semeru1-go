@@ -1,0 +1,132 @@
+{"time":"2023-07-06 15:18:34","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:18:35","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:18:35","message":"App Address = localhost:7716"}
+{"time":"2023-07-06 15:22:45","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:22:45","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:22:45","message":"App Address = localhost:7716"}
+{"time":"2023-07-06 15:26:57","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:26:57","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:26:57","message":"App Address = localhost:7716"}
+{"time":"2023-07-06 15:28:39","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:28:39","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:28:39","message":"App Address = localhost:7716"}
+{"time":"2023-07-06 15:30:36","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:30:36","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:30:36","message":"App Address = localhost:7716"}
+{"time":"2023-07-06 15:32:01","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:32:01","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:32:01","message":"App Address = localhost:7716"}
+{"time":"2023-07-06 15:34:41","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:34:41","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:34:41","message":"App Address = localhost:7716"}
+{"time":"2023-07-06 15:38:33","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:38:33","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:38:33","message":"App Address = localhost:7716"}
+{"time":"2023-07-06 15:40:35","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:40:35","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:40:35","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-06 15:40:58","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"QmkA98zb-8tZ2-A1al-hkt4-1vDrmQna4Q7c","data":{"city_id":0,"city_name":"string","city_province":0,"limit":0,"offset":0}},"time":"2023-07-06 15:40:58"}
+{"level":"error","error":"limit can not be zero or negative","function":"SelectCityById","message":0,"time":"2023-07-06 15:40:58"}
+{"level":"error","error":"limit can not be zero or negative","function":"SelectCityById","message":{"city_id":0,"city_name":"string","city_province":0,"limit":0,"offset":0},"time":"2023-07-06 15:40:58"}
+{"level":"error","error":"limit can not be zero or negative","function":"SelectCityById","message":"","time":"2023-07-06 15:40:58"}
+{"level":"info","time":"2023-07-06 15:41:42","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"QmkA98zb-8tZ2-A1al-hkt4-1vDrmQna4Q7c","data":{"city_id":1,"city_name":"string","city_province":0,"limit":1,"offset":0}},"time":"2023-07-06 15:41:42"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-06 15:41:42"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-06 15:41:42"}
+{"time":"2023-07-06 15:44:33","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:44:33","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:44:33","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-06 15:44:54","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"iecfjdvJ-aAIl-trJ2-QKnn-i7XVT5UPx8jv","data":{"city_id":1,"city_name":"string","city_province":0,"limit":1,"offset":0}},"time":"2023-07-06 15:44:54"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-06 15:44:54"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-06 15:44:54"}
+{"level":"info","time":"2023-07-06 15:45:20","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByName","message":{"request_id":"bzn62qUu-8IOd-oqLc-us3C-pTZ7BWMo4b4G","data":{"city_id":1,"city_name":"sura","city_province":0,"limit":1,"offset":0}},"time":"2023-07-06 15:45:20"}
+{"level":"debug","function":"SelectCityByName","message":"=== New Query ===","time":"2023-07-06 15:45:20"}
+{"level":"debug","function":"SelectCityByName","message":{"CityId":0,"Name":"sura","Province":0},"time":"2023-07-06 15:45:20"}
+{"level":"info","time":"2023-07-06 15:45:43","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByName","message":{"request_id":"bzn62qUu-8IOd-oqLc-us3C-pTZ7BWMo4b4G","data":{"city_id":1,"city_name":"sura","city_province":0,"limit":1,"offset":0}},"time":"2023-07-06 15:45:43"}
+{"level":"debug","function":"SelectCityByName","message":"=== New Query ===","time":"2023-07-06 15:45:43"}
+{"level":"debug","function":"SelectCityByName","message":{"CityId":0,"Name":"sura","Province":0},"time":"2023-07-06 15:45:43"}
+{"level":"info","time":"2023-07-06 15:45:52","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByName","message":{"request_id":"bzn62qUu-8IOd-oqLc-us3C-pTZ7BWMo4b4G","data":{"city_id":1,"city_name":"surabaya","city_province":0,"limit":1,"offset":0}},"time":"2023-07-06 15:45:52"}
+{"level":"debug","function":"SelectCityByName","message":"=== New Query ===","time":"2023-07-06 15:45:52"}
+{"level":"debug","function":"SelectCityByName","message":{"CityId":0,"Name":"surabaya","Province":0},"time":"2023-07-06 15:45:52"}
+{"level":"info","time":"2023-07-06 15:46:17","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityByName","message":{"request_id":"bzn62qUu-8IOd-oqLc-us3C-pTZ7BWMo4b4G","data":{"city_id":1,"city_name":"sura","city_province":0,"limit":1,"offset":0}},"time":"2023-07-06 15:46:17"}
+{"level":"debug","function":"SelectCityByName","message":"=== New Query ===","time":"2023-07-06 15:46:17"}
+{"level":"debug","function":"SelectCityByName","message":{"CityId":0,"Name":"sura","Province":0},"time":"2023-07-06 15:46:17"}
+{"level":"info","time":"2023-07-06 15:48:13","message":"=== New Request ==="}
+{"level":"debug","function":"SelectAllCity","message":{"request_id":"8HXyVik2-RuyJ-sqLH-HuJQ-DGOr00of1OVp","data":{"city_id":1,"city_name":"string","city_province":0,"limit":1,"offset":0}},"time":"2023-07-06 15:48:13"}
+{"level":"debug","function":"SelectAllCity","message":"=== New Query ===","time":"2023-07-06 15:48:13"}
+{"level":"debug","function":"SelectAllCity","message":{},"time":"2023-07-06 15:48:13"}
+{"level":"info","time":"2023-07-06 15:48:27","message":"=== New Request ==="}
+{"level":"debug","function":"SelectAllCity","message":{"request_id":"8HXyVik2-RuyJ-sqLH-HuJQ-DGOr00of1OVp","data":{"city_id":1,"city_name":"string","city_province":0,"limit":100,"offset":0}},"time":"2023-07-06 15:48:27"}
+{"level":"debug","function":"SelectAllCity","message":"=== New Query ===","time":"2023-07-06 15:48:27"}
+{"level":"debug","function":"SelectAllCity","message":{},"time":"2023-07-06 15:48:27"}
+{"level":"info","time":"2023-07-06 15:49:09","message":"=== New Request ==="}
+{"level":"debug","function":"SelectAllCity","message":{"request_id":"8HXyVik2-RuyJ-sqLH-HuJQ-DGOr00of1OVp","data":{"city_id":1,"city_name":"string","city_province":0,"limit":100,"offset":0}},"time":"2023-07-06 15:49:09"}
+{"level":"debug","function":"SelectAllCity","message":"=== New Query ===","time":"2023-07-06 15:49:09"}
+{"level":"debug","function":"SelectAllCity","message":{},"time":"2023-07-06 15:49:09"}
+{"time":"2023-07-06 15:53:19","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:53:19","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:53:19","message":"App Address = localhost:7716"}
+{"time":"2023-07-06 15:53:44","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:53:44","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:53:44","message":"App Address = localhost:7716"}
+{"time":"2023-07-06 15:55:11","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:55:11","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:55:11","message":"App Address = localhost:7716"}
+{"time":"2023-07-06 15:55:52","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:55:52","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:55:52","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-06 15:56:12","message":"=== New Request ==="}
+{"level":"debug","function":"SelectProvinceById","message":{"request_id":"1HbYpUOP-Zuhu-CqfV-8Mas-si2YCN3Unqdj","data":{"limit":64,"offset":32,"province_id":34,"province_name":"YfzXLOQUETsVtyiHRHGXoGIaOIlWvReGoAVzfGuZuuEpwIhVTyzL"}},"time":"2023-07-06 15:56:12"}
+{"level":"error","error":"json: cannot unmarshal string into Go struct field RequestProvince.province_name of type int","function":"SelectProvinceById","message":{"province_id":34,"province_name":0,"limit":64,"offset":32},"time":"2023-07-06 15:56:12"}
+{"level":"error","error":"json: cannot unmarshal string into Go struct field RequestProvince.province_name of type int","function":"SelectProvinceById","message":"","time":"2023-07-06 15:56:12"}
+{"time":"2023-07-06 15:57:14","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 15:57:14","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 15:57:14","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-06 15:57:23","message":"=== New Request ==="}
+{"level":"debug","function":"SelectProvinceById","message":{"request_id":"1HbYpUOP-Zuhu-CqfV-8Mas-si2YCN3Unqdj","data":{"limit":64,"offset":32,"province_id":34,"province_name":"YfzXLOQUETsVtyiHRHGXoGIaOIlWvReGoAVzfGuZuuEpwIhVTyzL"}},"time":"2023-07-06 15:57:23"}
+{"level":"debug","function":"SelectProvinceById","message":"=== New Query ===","time":"2023-07-06 15:57:23"}
+{"level":"debug","function":"SelectProvinceById","message":{},"time":"2023-07-06 15:57:23"}
+{"level":"info","time":"2023-07-06 15:57:36","message":"=== New Request ==="}
+{"level":"debug","function":"SelectProvinceById","message":{"request_id":"1HbYpUOP-Zuhu-CqfV-8Mas-si2YCN3Unqdj","data":{"limit":64,"offset":32,"province_id":33,"province_name":"YfzXLOQUETsVtyiHRHGXoGIaOIlWvReGoAVzfGuZuuEpwIhVTyzL"}},"time":"2023-07-06 15:57:36"}
+{"level":"debug","function":"SelectProvinceById","message":"=== New Query ===","time":"2023-07-06 15:57:36"}
+{"level":"debug","function":"SelectProvinceById","message":{},"time":"2023-07-06 15:57:36"}
+{"level":"info","time":"2023-07-06 15:57:37","message":"=== New Request ==="}
+{"level":"debug","function":"SelectProvinceById","message":{"request_id":"1HbYpUOP-Zuhu-CqfV-8Mas-si2YCN3Unqdj","data":{"limit":64,"offset":32,"province_id":33,"province_name":"YfzXLOQUETsVtyiHRHGXoGIaOIlWvReGoAVzfGuZuuEpwIhVTyzL"}},"time":"2023-07-06 15:57:37"}
+{"level":"debug","function":"SelectProvinceById","message":"=== New Query ===","time":"2023-07-06 15:57:37"}
+{"level":"debug","function":"SelectProvinceById","message":{},"time":"2023-07-06 15:57:37"}
+{"level":"info","time":"2023-07-06 15:58:11","message":"=== New Request ==="}
+{"level":"debug","function":"SelectProvinceById","message":{"request_id":"1HbYpUOP-Zuhu-CqfV-8Mas-si2YCN3Unqdj","data":{"limit":64,"offset":0,"province_id":33,"province_name":"YfzXLOQUETsVtyiHRHGXoGIaOIlWvReGoAVzfGuZuuEpwIhVTyzL"}},"time":"2023-07-06 15:58:11"}
+{"level":"debug","function":"SelectProvinceById","message":"=== New Query ===","time":"2023-07-06 15:58:11"}
+{"level":"debug","function":"SelectProvinceById","message":{},"time":"2023-07-06 15:58:11"}
+{"level":"info","time":"2023-07-06 15:58:38","message":"=== New Request ==="}
+{"level":"debug","function":"SelectProvinceById","message":{"request_id":"1HbYpUOP-Zuhu-CqfV-8Mas-si2YCN3Unqdj","data":{"limit":64,"offset":0,"province_id":34,"province_name":"YfzXLOQUETsVtyiHRHGXoGIaOIlWvReGoAVzfGuZuuEpwIhVTyzL"}},"time":"2023-07-06 15:58:38"}
+{"level":"debug","function":"SelectProvinceById","message":"=== New Query ===","time":"2023-07-06 15:58:38"}
+{"level":"debug","function":"SelectProvinceById","message":{},"time":"2023-07-06 15:58:38"}
+{"level":"info","time":"2023-07-06 15:59:01","message":"=== New Request ==="}
+{"level":"debug","function":"SelectAllProvince","message":{"request_id":"8mkXbySJ-0GP6-NnWl-inkJ-omKwdipX6zCV","data":{"limit":64,"offset":32,"province_id":34,"province_name":"IaxqZmydxhMsWkcGbDdLtuMbXoNzJrFhGPWbzUZuojphADstdzrYACZ"}},"time":"2023-07-06 15:59:01"}
+{"level":"debug","function":"SelectAllProvince","message":"=== New Query ===","time":"2023-07-06 15:59:01"}
+{"level":"debug","function":"SelectAllProvince","message":{},"time":"2023-07-06 15:59:01"}
+{"level":"info","time":"2023-07-06 15:59:07","message":"=== New Request ==="}
+{"level":"debug","function":"SelectAllProvince","message":{"request_id":"8mkXbySJ-0GP6-NnWl-inkJ-omKwdipX6zCV","data":{"limit":64,"offset":0,"province_id":34,"province_name":"IaxqZmydxhMsWkcGbDdLtuMbXoNzJrFhGPWbzUZuojphADstdzrYACZ"}},"time":"2023-07-06 15:59:07"}
+{"level":"debug","function":"SelectAllProvince","message":"=== New Query ===","time":"2023-07-06 15:59:07"}
+{"level":"debug","function":"SelectAllProvince","message":{},"time":"2023-07-06 15:59:07"}
+{"time":"2023-07-06 16:00:08","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 16:00:08","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 16:00:08","message":"App Address = localhost:7716"}
+{"time":"2023-07-06 16:02:40","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-06 16:02:40","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-06 16:02:40","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-06 16:03:00","message":"=== New Request ==="}
+{"level":"debug","function":"SelectProvinceById","message":{"request_id":"StLLuYuV-7dvb-CW1Y-zYIx-PS5aODiJ04Fe","data":{"limit":64,"offset":32,"province_id":34,"province_name":"XJchBWHxFcuIuEnCZVQmOoiTYcLpZRNwjOuK"}},"time":"2023-07-06 16:03:00"}
+{"level":"debug","function":"SelectProvinceById","message":"=== New Query ===","time":"2023-07-06 16:03:00"}
+{"level":"debug","function":"SelectProvinceById","message":{},"time":"2023-07-06 16:03:00"}
+{"level":"info","time":"2023-07-06 16:03:12","message":"=== New Request ==="}
+{"level":"debug","function":"SelectProvinceById","message":{"request_id":"StLLuYuV-7dvb-CW1Y-zYIx-PS5aODiJ04Fe","data":{"limit":64,"offset":0,"province_id":34,"province_name":"XJchBWHxFcuIuEnCZVQmOoiTYcLpZRNwjOuK"}},"time":"2023-07-06 16:03:12"}
+{"level":"debug","function":"SelectProvinceById","message":"=== New Query ===","time":"2023-07-06 16:03:12"}
+{"level":"debug","function":"SelectProvinceById","message":{},"time":"2023-07-06 16:03:12"}

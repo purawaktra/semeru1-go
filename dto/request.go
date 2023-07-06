@@ -15,8 +15,7 @@ type RequestCity struct {
 
 type RequestProvince struct {
 	ProvinceId   int    `json:"province_id"`
-	CityName     string `json:"city_name"`
-	CityProvince int    `json:"city_province"`
+	ProvinceName string `json:"province_name"`
 	Limit        int    `json:"limit"`
 	Offset       int    `json:"offset"`
 }
