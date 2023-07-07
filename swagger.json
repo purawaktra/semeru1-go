@@ -32,7 +32,7 @@
         "description": "TThis should be return only one city ya",
         "operationId": "GetCityById",
         "security": [
-          {"bearerAuth":  []}
+          {"basicAuth":  []}
         ],
         "parameters": [
           {
@@ -88,7 +88,7 @@
         "description": "You can create lose search with this, this should be return related one",
         "operationId": "GetCityByName",
         "security": [
-          {"bearerAuth":  []}
+          {"basicAuth":  []}
         ],
         "parameters": [
           {
@@ -144,7 +144,7 @@
         "description": "TThis should be return all city in given province",
         "operationId": "GetCityByProvince",
         "security": [
-          {"bearerAuth":  []}
+          {"basicAuth":  []}
         ],
         "parameters": [
           {
@@ -200,7 +200,7 @@
         "description": "Carefull on using limit and offset ya",
         "operationId": "GetAllCity",
         "security": [
-          {"bearerAuth":  []}
+          {"basicAuth":  []}
         ],
         "parameters": [
           {
@@ -256,7 +256,7 @@
         "description": "Single return ya, it should be",
         "operationId": "getProvinceById",
         "security": [
-          {"bearerAuth":  []}
+          {"basicAuth":  []}
         ],
         "parameters": [
           {
@@ -312,7 +312,7 @@
         "description": "Single response get all province name, define offset to shift through available data",
         "operationId": "getAllProvince",
         "security": [
-          {"bearerAuth":  []}
+          {"basicAuth":  []}
         ],
         "parameters": [
           {
@@ -362,7 +362,7 @@
   },
   "servers": [
     {
-      "url": "https://localhost:7716/semeru1/api/v1"
+      "url": "http://localhost:7716/semeru1/api/v1"
     }
   ],
   "components": {
@@ -418,6 +418,7 @@
               "limit": {
                 "type": "integer",
                 "format": "uint",
+                "minimum": 1,
                 "maxLength": 3
               },
               "offset": {
@@ -462,8 +463,6 @@
               },
               "offset": {
                 "type": "integer",
-                "maximum": 32,
-                "minimum": -32,
                 "format": "int"
               }
             }
@@ -554,5 +553,10 @@
         }
       }
     }
-  }
+  },
+  "security": [
+    {
+      "basicAuth": []
+    }
+  ]
 }

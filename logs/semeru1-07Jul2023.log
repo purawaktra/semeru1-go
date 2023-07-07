@@ -1,0 +1,32 @@
+{"time":"2023-07-07 08:45:31","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-07 08:45:31","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-07 08:45:31","message":"App Address = localhost:7716"}
+{"level":"warn","function":"CheckBasicAuth","message":"Basic auth not set","time":"2023-07-07 08:46:27"}
+{"level":"warn","function":"CheckBasicAuth","message":"Basic auth not set","time":"2023-07-07 08:46:51"}
+{"level":"warn","function":"CheckBasicAuth","message":"Basic auth not set","time":"2023-07-07 08:47:14"}
+{"level":"warn","function":"CheckBasicAuth","message":"Basic auth not set","time":"2023-07-07 08:47:38"}
+{"time":"2023-07-07 09:00:15","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-07 09:00:15","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-07 09:00:15","message":"App Address = localhost:7716"}
+{"level":"warn","function":"CheckBasicAuth","message":"Basic auth not set","time":"2023-07-07 09:00:35"}
+{"time":"2023-07-07 09:06:16","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-07 09:06:16","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-07 09:06:16","message":"App Address = localhost:7716"}
+{"time":"2023-07-07 09:08:05","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-07 09:08:05","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-07 09:08:05","message":"App Address = localhost:7716"}
+{"level":"warn","function":"CheckBasicAuth","message":"Password given not valid","time":"2023-07-07 09:08:22"}
+{"level":"info","time":"2023-07-07 09:09:14","message":"Basic auth successful"}
+{"level":"info","time":"2023-07-07 09:09:14","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"Capo9vJK-dU1y-R9K0-Yp43-wuxyrcRiNvnH","data":{"city_id":1,"city_name":"string","city_province":0,"limit":0,"offset":0}},"time":"2023-07-07 09:09:14"}
+{"level":"error","error":"limit can not be zero or negative","function":"SelectCityById","message":0,"time":"2023-07-07 09:09:14"}
+{"level":"error","error":"limit can not be zero or negative","function":"SelectCityById","message":{"city_id":1,"city_name":"string","city_province":0,"limit":0,"offset":0},"time":"2023-07-07 09:09:14"}
+{"level":"error","error":"limit can not be zero or negative","function":"SelectCityById","message":"","time":"2023-07-07 09:09:14"}
+{"level":"info","time":"2023-07-07 09:09:23","message":"Basic auth successful"}
+{"level":"info","time":"2023-07-07 09:09:23","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"Capo9vJK-dU1y-R9K0-Yp43-wuxyrcRiNvnH","data":{"city_id":1,"city_name":"string","city_province":0,"limit":1,"offset":0}},"time":"2023-07-07 09:09:23"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-07 09:09:23"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-07 09:09:23"}
+{"time":"2023-07-07 09:11:29","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-07 09:11:29","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-07 09:11:29","message":"App Address = localhost:7716"}

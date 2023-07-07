@@ -38,7 +38,7 @@ const docTemplate = `{
         "description": "TThis should be return only one city ya",
         "operationId": "GetCityById",
         "security": [
-          {"bearerAuth":  []}
+          {"basicAuth":  []}
         ],
         "parameters": [
           {
@@ -94,7 +94,7 @@ const docTemplate = `{
         "description": "You can create lose search with this, this should be return related one",
         "operationId": "GetCityByName",
         "security": [
-          {"bearerAuth":  []}
+          {"basicAuth":  []}
         ],
         "parameters": [
           {
@@ -150,7 +150,7 @@ const docTemplate = `{
         "description": "TThis should be return all city in given province",
         "operationId": "GetCityByProvince",
         "security": [
-          {"bearerAuth":  []}
+          {"basicAuth":  []}
         ],
         "parameters": [
           {
@@ -206,7 +206,7 @@ const docTemplate = `{
         "description": "Carefull on using limit and offset ya",
         "operationId": "GetAllCity",
         "security": [
-          {"bearerAuth":  []}
+          {"basicAuth":  []}
         ],
         "parameters": [
           {
@@ -262,7 +262,7 @@ const docTemplate = `{
         "description": "Single return ya, it should be",
         "operationId": "getProvinceById",
         "security": [
-          {"bearerAuth":  []}
+          {"basicAuth":  []}
         ],
         "parameters": [
           {
@@ -318,7 +318,7 @@ const docTemplate = `{
         "description": "Single response get all province name, define offset to shift through available data",
         "operationId": "getAllProvince",
         "security": [
-          {"bearerAuth":  []}
+          {"basicAuth":  []}
         ],
         "parameters": [
           {
@@ -330,7 +330,7 @@ const docTemplate = `{
         },
         "responses": {
           "200": {
-            "description": "getCity returned city based on given request",
+            "description": "getAllProvince returned province based on given request",
             "content": {
               "application/json": {
                 "schema": {
@@ -424,6 +424,7 @@ const docTemplate = `{
               "limit": {
                 "type": "integer",
                 "format": "uint",
+                "minimum": 1,
                 "maxLength": 3
               },
               "offset": {
@@ -458,7 +459,7 @@ const docTemplate = `{
                 "type": "string",
                 "maxLength": 64,
                 "format": "uint",
-                "pattern": "^[A-Za-z]{0,64}$"
+                "pattern": "^[A-Za-z]$"
               },
               "limit": {
                 "type": "integer",
@@ -468,8 +469,6 @@ const docTemplate = `{
               },
               "offset": {
                 "type": "integer",
-                "maximum": 32,
-                "minimum": -32,
                 "format": "int"
               }
             }
@@ -496,12 +495,12 @@ const docTemplate = `{
           "response_time": {
             "type": "string",
             "maxLength": 64,
-            "pattern": "^[0-9]{0,64}$"
+            "pattern": "^[0-9]$"
           },
           "message": {
             "type": "string",
             "maxLength": 256,
-            "pattern": "^.{0,256}$"
+            "pattern": "^.$"
           },
           "data": {
             "type": "object",
@@ -531,12 +530,12 @@ const docTemplate = `{
           "response_time": {
             "type": "string",
             "maxLength": 64,
-            "pattern": "^[0-9]{0,64}$"
+            "pattern": "^[0-9]$"
           },
           "error": {
             "type": "string",
             "maxLength": 256,
-            "pattern": "^.{0,256}$"
+            "pattern": "^.$"
           }
         }
       }
@@ -560,7 +559,12 @@ const docTemplate = `{
         }
       }
     }
-  }
+  },
+  "security": [
+    {
+      "basicAuth": []
+    }
+  ]
 }`
 
 // SwaggerInfo holds exported Swagger Info so clients can modify it

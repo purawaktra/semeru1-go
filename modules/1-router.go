@@ -1,6 +1,9 @@
 package modules
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/purawaktra/semeru1-go/utils"
+)
 
 type Semeru1Router struct {
 	engine *gin.Engine
@@ -15,7 +18,7 @@ func CreateSemeru1Router(engine *gin.Engine, rh Semeru1RequestHandler) Semeru1Ro
 }
 
 func (r Semeru1Router) Init(path string) {
-	pathGroup := r.engine.Group(path)
+	pathGroup := r.engine.Group(path, utils.CheckBasicAuth)
 	pathGroup.POST("/select/city/id", r.rh.SelectCityById)
 	pathGroup.POST("/select/city/name", r.rh.SelectCityByName)
 	pathGroup.POST("/select/city/province", r.rh.SelectCityByProvince)
