@@ -34,8 +34,10 @@ func (ctrl Semeru1Controller) SelectCityById(req dto.Request) (any, error) {
 
 	// marshal to json data
 	marshaledData, err := json.Marshal(req.Data)
+
+	// check err in parsing
 	if err != nil {
-		utils.Error(err, "SelectCityById", marshaledData)
+		utils.Error(err, "SelectCityById", req.Data)
 
 		end := time.Now()
 		return dto.ResponseError{
@@ -53,6 +55,7 @@ func (ctrl Semeru1Controller) SelectCityById(req dto.Request) (any, error) {
 	var requestData dto.RequestCity
 	err = json.Unmarshal(marshaledData, &requestData)
 
+	// check err in parsing
 	if err != nil {
 		utils.Error(err, "SelectCityById", requestData)
 		// stop timer
@@ -116,7 +119,7 @@ func (ctrl Semeru1Controller) SelectCityByName(req dto.Request) (any, error) {
 	// marshal to json data
 	marshaledData, err := json.Marshal(req.Data)
 	if err != nil {
-		utils.Error(err, "SelectCityByName", marshaledData)
+		utils.Error(err, "SelectCityByName", req.Data)
 
 		end := time.Now()
 		return dto.ResponseError{
@@ -197,7 +200,7 @@ func (ctrl Semeru1Controller) SelectCityByProvince(req dto.Request) (any, error)
 	// marshal to json data
 	marshaledData, err := json.Marshal(req.Data)
 	if err != nil {
-		utils.Error(err, "SelectCityByProvince", marshaledData)
+		utils.Error(err, "SelectCityByProvince", req.Data)
 
 		end := time.Now()
 		return dto.ResponseError{
@@ -278,7 +281,7 @@ func (ctrl Semeru1Controller) SelectAllCity(req dto.Request) (any, error) {
 	// marshal to json data
 	marshaledData, err := json.Marshal(req.Data)
 	if err != nil {
-		utils.Error(err, "SelectAllCity", marshaledData)
+		utils.Error(err, "SelectAllCity", req.Data)
 
 		end := time.Now()
 		return dto.ResponseError{
@@ -358,7 +361,7 @@ func (ctrl Semeru1Controller) SelectProvinceById(req dto.Request) (any, error) {
 	// marshal to json data
 	marshaledData, err := json.Marshal(req.Data)
 	if err != nil {
-		utils.Error(err, "SelectProvinceById", marshaledData)
+		utils.Error(err, "SelectProvinceById", req.Data)
 
 		end := time.Now()
 		return dto.ResponseError{
@@ -439,7 +442,7 @@ func (ctrl Semeru1Controller) SelectAllProvince(req dto.Request) (any, error) {
 	// marshal to json data
 	marshaledData, err := json.Marshal(req.Data)
 	if err != nil {
-		utils.Error(err, "SelectAllProvince", marshaledData)
+		utils.Error(err, "SelectAllProvince", req.Data)
 
 		end := time.Now()
 		return dto.ResponseError{

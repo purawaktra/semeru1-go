@@ -34,9 +34,11 @@ func main() {
 		utils.MysqlPort,
 		utils.MysqlScheme)
 
+	// create mysql instance
 	gormInstance, err := utils.CreateGorm(dsn)
 	if err != nil {
 		utils.Error(err, "main", "")
+		panic(err)
 	}
 
 	// declare architecture

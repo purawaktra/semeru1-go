@@ -6,6 +6,10 @@
     "environment": "development",
     "log": {
       "level": "0"
+    },
+    "auth": {
+      "username": "SMR1",
+      "password": "ADMSMR1"
     }
   },
   "database":{

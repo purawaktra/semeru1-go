@@ -12,6 +12,9 @@ var (
 	AppEnvironment string
 	AppLogLevel    string
 
+	AppAuthUsername string
+	AppAuthPassword string
+
 	MysqlHost     string
 	MysqlPort     string
 	MysqlScheme   string
@@ -45,6 +48,8 @@ func InitConfig() {
 		AppPort = viper.GetString("app.port")
 		AppEnvironment = viper.GetString("app.environment")
 		AppLogLevel = viper.GetString("app.log.level")
+		AppAuthUsername = viper.GetString("app.auth.username")
+		AppAuthPassword = viper.GetString("app.auth.password")
 
 		// get variable for db
 		MysqlHost = viper.GetString("database.mysql.host")
@@ -63,6 +68,8 @@ func InitConfig() {
 		AppPort = os.Getenv("APP_PORT")
 		AppEnvironment = os.Getenv("APP_ENV")
 		AppLogLevel = os.Getenv("APP_LOG_LEVEL")
+		AppAuthUsername = os.Getenv("APP_AUTH_USERNAME")
+		AppAuthPassword = os.Getenv("APP_AUTH_PASSWORD")
 
 		// get variable for db
 		MysqlHost = os.Getenv("MYSQL_HOST")

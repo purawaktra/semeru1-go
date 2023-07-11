@@ -13,13 +13,13 @@ func CheckBasicAuth(c *gin.Context) {
 		c.Abort()
 		return
 	}
-	if username != "SMR1" {
+	if username != AppAuthUsername {
 		Warn("CheckBasicAuth", "Username given not valid")
 		c.JSON(http.StatusUnauthorized, "")
 		c.Abort()
 		return
 	}
-	if password != "ADMSMR1" {
+	if password != AppAuthPassword {
 		Warn("CheckBasicAuth", "Password given not valid")
 		c.JSON(http.StatusUnauthorized, "")
 		c.Abort()

@@ -36,7 +36,7 @@ func (rh Semeru1RequestHandler) SelectCityById(c *gin.Context) {
 	// check for error on parse request body
 	if err != nil {
 		utils.Error(err, "SelectCityById", "")
-		c.JSONP(http.StatusBadRequest, nil)
+		c.JSON(http.StatusBadRequest, nil)
 		return
 	}
 
@@ -47,12 +47,12 @@ func (rh Semeru1RequestHandler) SelectCityById(c *gin.Context) {
 	// check for error on call controller
 	if err != nil {
 		utils.Error(err, "SelectCityById", "")
-		c.JSONP(http.StatusInternalServerError, response)
+		c.JSON(http.StatusInternalServerError, response)
 		return
 	}
 
 	// create success return
-	c.JSONP(http.StatusOK, response)
+	c.JSON(http.StatusOK, response)
 	return
 }
 
@@ -66,7 +66,7 @@ func (rh Semeru1RequestHandler) SelectCityByName(c *gin.Context) {
 	// check for error on parse request body
 	if err != nil {
 		utils.Error(err, "SelectCityByName", "")
-		c.JSONP(http.StatusBadRequest, nil)
+		c.JSON(http.StatusBadRequest, nil)
 		return
 	}
 
@@ -77,12 +77,12 @@ func (rh Semeru1RequestHandler) SelectCityByName(c *gin.Context) {
 	// check for error on call controller
 	if err != nil {
 		utils.Error(err, "SelectCityByName", "")
-		c.JSONP(http.StatusInternalServerError, response)
+		c.JSON(http.StatusInternalServerError, response)
 		return
 	}
 
 	// create success return
-	c.JSONP(http.StatusOK, response)
+	c.JSON(http.StatusOK, response)
 	return
 }
 
@@ -96,7 +96,7 @@ func (rh Semeru1RequestHandler) SelectCityByProvince(c *gin.Context) {
 	// check for error on parse request body
 	if err != nil {
 		utils.Error(err, "SelectCityByProvince", "")
-		c.JSONP(http.StatusBadRequest, nil)
+		c.JSON(http.StatusBadRequest, nil)
 		return
 	}
 
@@ -107,12 +107,12 @@ func (rh Semeru1RequestHandler) SelectCityByProvince(c *gin.Context) {
 	// check for error on call controller
 	if err != nil {
 		utils.Error(err, "SelectCityByProvince", "")
-		c.JSONP(http.StatusInternalServerError, response)
+		c.JSON(http.StatusInternalServerError, response)
 		return
 	}
 
 	// create success return
-	c.JSONP(http.StatusOK, response)
+	c.JSON(http.StatusOK, response)
 	return
 }
 
@@ -126,7 +126,7 @@ func (rh Semeru1RequestHandler) SelectAllCity(c *gin.Context) {
 	// check for error on parse request body
 	if err != nil {
 		utils.Error(err, "SelectAllCity", "")
-		c.JSONP(http.StatusBadRequest, nil)
+		c.JSON(http.StatusBadRequest, nil)
 		return
 	}
 
@@ -137,12 +137,12 @@ func (rh Semeru1RequestHandler) SelectAllCity(c *gin.Context) {
 	// check for error on call controller
 	if err != nil {
 		utils.Error(err, "SelectAllCity", "")
-		c.JSONP(http.StatusInternalServerError, response)
+		c.JSON(http.StatusInternalServerError, response)
 		return
 	}
 
 	// create success return
-	c.JSONP(http.StatusOK, response)
+	c.JSON(http.StatusOK, response)
 	return
 }
 
@@ -156,7 +156,7 @@ func (rh Semeru1RequestHandler) SelectProvinceById(c *gin.Context) {
 	// check for error on parse request body
 	if err != nil {
 		utils.Error(err, "SelectProvinceById", "")
-		c.JSONP(http.StatusBadRequest, nil)
+		c.JSON(http.StatusBadRequest, nil)
 		return
 	}
 
@@ -167,12 +167,12 @@ func (rh Semeru1RequestHandler) SelectProvinceById(c *gin.Context) {
 	// check for error on call controller
 	if err != nil {
 		utils.Error(err, "SelectProvinceById", "")
-		c.JSONP(http.StatusInternalServerError, response)
+		c.JSON(http.StatusInternalServerError, response)
 		return
 	}
 
 	// create success return
-	c.JSONP(http.StatusOK, response)
+	c.JSON(http.StatusOK, response)
 	return
 }
 
@@ -186,7 +186,7 @@ func (rh Semeru1RequestHandler) SelectAllProvince(c *gin.Context) {
 	// check for error on parse request body
 	if err != nil {
 		utils.Error(err, "SelectAllProvince", "")
-		c.JSONP(http.StatusBadRequest, nil)
+		c.JSON(http.StatusBadRequest, nil)
 		return
 	}
 
@@ -197,11 +197,11 @@ func (rh Semeru1RequestHandler) SelectAllProvince(c *gin.Context) {
 	// check for error on call controller
 	if err != nil {
 		utils.Error(err, "SelectAllProvince", "")
-		c.JSONP(http.StatusInternalServerError, response)
+		c.JSON(http.StatusInternalServerError, response)
 		return
 	}
 
 	// create success return
-	c.JSONP(http.StatusOK, response)
+	c.JSON(http.StatusOK, response)
 	return
 }
