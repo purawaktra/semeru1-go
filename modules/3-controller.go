@@ -32,10 +32,8 @@ func (ctrl Semeru1Controller) SelectCityById(req dto.Request) (any, error) {
 	// start timer
 	start := time.Now()
 
-	// marshal to json data
+	// marshal to json data and check err
 	marshaledData, err := json.Marshal(req.Data)
-
-	// check err in parsing
 	if err != nil {
 		utils.Error(err, "SelectCityById", req.Data)
 
@@ -51,11 +49,9 @@ func (ctrl Semeru1Controller) SelectCityById(req dto.Request) (any, error) {
 		}, err
 	}
 
-	// unmarshal to struct
+	// unmarshal to struct and check err
 	var requestData dto.RequestCity
 	err = json.Unmarshal(marshaledData, &requestData)
-
-	// check err in parsing
 	if err != nil {
 		utils.Error(err, "SelectCityById", requestData)
 		// stop timer
@@ -72,13 +68,11 @@ func (ctrl Semeru1Controller) SelectCityById(req dto.Request) (any, error) {
 		}, err
 	}
 
-	// call usecase for the city
+	// call usecase for the city and check err
 	cities, err := ctrl.uc.SelectCityById(
 		requestData.CityId,
 		requestData.Limit,
 		requestData.Offset)
-
-	// check for error on call usecase
 	if err != nil {
 		utils.Error(err, "SelectCityById", requestData)
 		// stop timer
@@ -116,7 +110,7 @@ func (ctrl Semeru1Controller) SelectCityByName(req dto.Request) (any, error) {
 	// start timer
 	start := time.Now()
 
-	// marshal to json data
+	// marshal to json data and check err
 	marshaledData, err := json.Marshal(req.Data)
 	if err != nil {
 		utils.Error(err, "SelectCityByName", req.Data)
@@ -133,10 +127,9 @@ func (ctrl Semeru1Controller) SelectCityByName(req dto.Request) (any, error) {
 		}, err
 	}
 
-	// unmarshal to struct
+	// unmarshal to struct and check err
 	var requestData dto.RequestCity
 	err = json.Unmarshal(marshaledData, &requestData)
-
 	if err != nil {
 		utils.Error(err, "SelectCityByName", requestData)
 		// stop timer
@@ -153,13 +146,11 @@ func (ctrl Semeru1Controller) SelectCityByName(req dto.Request) (any, error) {
 		}, err
 	}
 
-	// call usecase for the city
+	// call usecase for the city and check err
 	cities, err := ctrl.uc.SelectCityByName(
 		requestData.CityName,
 		requestData.Limit,
 		requestData.Offset)
-
-	// check for error on call usecase
 	if err != nil {
 		utils.Error(err, "SelectCityByName", requestData)
 		// stop timer
@@ -197,7 +188,7 @@ func (ctrl Semeru1Controller) SelectCityByProvince(req dto.Request) (any, error)
 	// start timer
 	start := time.Now()
 
-	// marshal to json data
+	// marshal to json data and check err
 	marshaledData, err := json.Marshal(req.Data)
 	if err != nil {
 		utils.Error(err, "SelectCityByProvince", req.Data)
@@ -214,10 +205,9 @@ func (ctrl Semeru1Controller) SelectCityByProvince(req dto.Request) (any, error)
 		}, err
 	}
 
-	// unmarshal to struct
+	// unmarshal to struct and check err
 	var requestData dto.RequestCity
 	err = json.Unmarshal(marshaledData, &requestData)
-
 	if err != nil {
 		utils.Error(err, "SelectCityByProvince", requestData)
 		// stop timer
@@ -234,13 +224,11 @@ func (ctrl Semeru1Controller) SelectCityByProvince(req dto.Request) (any, error)
 		}, err
 	}
 
-	// call usecase for the city
+	// call usecase for the city and check err
 	cities, err := ctrl.uc.SelectCityByProvince(
 		requestData.CityProvince,
 		requestData.Limit,
 		requestData.Offset)
-
-	// check for error on call usecase
 	if err != nil {
 		utils.Error(err, "SelectCityByProvince", requestData)
 		// stop timer
@@ -278,7 +266,7 @@ func (ctrl Semeru1Controller) SelectAllCity(req dto.Request) (any, error) {
 	// start timer
 	start := time.Now()
 
-	// marshal to json data
+	// marshal to json data and check err
 	marshaledData, err := json.Marshal(req.Data)
 	if err != nil {
 		utils.Error(err, "SelectAllCity", req.Data)
@@ -295,10 +283,9 @@ func (ctrl Semeru1Controller) SelectAllCity(req dto.Request) (any, error) {
 		}, err
 	}
 
-	// unmarshal to struct
+	// unmarshal to struct and check err
 	var requestData dto.RequestCity
 	err = json.Unmarshal(marshaledData, &requestData)
-
 	if err != nil {
 		utils.Error(err, "SelectAllCity", requestData)
 		// stop timer
@@ -315,12 +302,10 @@ func (ctrl Semeru1Controller) SelectAllCity(req dto.Request) (any, error) {
 		}, err
 	}
 
-	// call usecase for the city
+	// call usecase for the city and check err
 	cities, err := ctrl.uc.SelectAllCity(
 		requestData.Limit,
 		requestData.Offset)
-
-	// check for error on call usecase
 	if err != nil {
 		utils.Error(err, "SelectAllCity", requestData)
 		// stop timer
@@ -358,7 +343,7 @@ func (ctrl Semeru1Controller) SelectProvinceById(req dto.Request) (any, error) {
 	// start timer
 	start := time.Now()
 
-	// marshal to json data
+	// marshal to json data and check err
 	marshaledData, err := json.Marshal(req.Data)
 	if err != nil {
 		utils.Error(err, "SelectProvinceById", req.Data)
@@ -375,10 +360,9 @@ func (ctrl Semeru1Controller) SelectProvinceById(req dto.Request) (any, error) {
 		}, err
 	}
 
-	// unmarshal to struct
+	// unmarshal to struct and check err
 	var requestData dto.RequestProvince
 	err = json.Unmarshal(marshaledData, &requestData)
-
 	if err != nil {
 		utils.Error(err, "SelectProvinceById", requestData)
 		// stop timer
@@ -395,13 +379,11 @@ func (ctrl Semeru1Controller) SelectProvinceById(req dto.Request) (any, error) {
 		}, err
 	}
 
-	// call usecase for the province
+	// call usecase for the province and check err
 	provinces, err := ctrl.uc.SelectProvinceById(
 		requestData.ProvinceId,
 		requestData.Limit,
 		requestData.Offset)
-
-	// check for error on call usecase
 	if err != nil {
 		utils.Error(err, "SelectProvinceById", requestData)
 		// stop timer
@@ -439,7 +421,7 @@ func (ctrl Semeru1Controller) SelectAllProvince(req dto.Request) (any, error) {
 	// start timer
 	start := time.Now()
 
-	// marshal to json data
+	// marshal to json data and check err
 	marshaledData, err := json.Marshal(req.Data)
 	if err != nil {
 		utils.Error(err, "SelectAllProvince", req.Data)
@@ -456,10 +438,9 @@ func (ctrl Semeru1Controller) SelectAllProvince(req dto.Request) (any, error) {
 		}, err
 	}
 
-	// unmarshal to struct
+	// unmarshal to struct and check err
 	var requestData dto.RequestProvince
 	err = json.Unmarshal(marshaledData, &requestData)
-
 	if err != nil {
 		utils.Error(err, "SelectAllProvince", requestData)
 		// stop timer
@@ -476,12 +457,10 @@ func (ctrl Semeru1Controller) SelectAllProvince(req dto.Request) (any, error) {
 		}, err
 	}
 
-	// call usecase for the province
+	// call usecase for the province and check err
 	provinces, err := ctrl.uc.SelectAllProvince(
 		requestData.Limit,
 		requestData.Offset)
-
-	// check for error on call usecase
 	if err != nil {
 		utils.Error(err, "SelectAllProvince", requestData)
 		// stop timer

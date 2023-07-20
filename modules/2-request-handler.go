@@ -3,6 +3,7 @@ package modules
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/purawaktra/semeru1-go/dto"
+	"github.com/purawaktra/semeru1-go/functions"
 	"github.com/purawaktra/semeru1-go/utils"
 	"net/http"
 )
@@ -36,7 +37,14 @@ func (rh Semeru1RequestHandler) SelectCityById(c *gin.Context) {
 	// check for error on parse request body
 	if err != nil {
 		utils.Error(err, "SelectCityById", "")
-		c.JSON(http.StatusBadRequest, nil)
+		c.Data(http.StatusBadRequest, "", nil)
+		return
+	}
+
+	// check for request id
+	if !functions.IsValidUUID(requestBody.RequestId) {
+		utils.Error(err, "SelectCityById", "")
+		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
@@ -66,7 +74,14 @@ func (rh Semeru1RequestHandler) SelectCityByName(c *gin.Context) {
 	// check for error on parse request body
 	if err != nil {
 		utils.Error(err, "SelectCityByName", "")
-		c.JSON(http.StatusBadRequest, nil)
+		c.Data(http.StatusBadRequest, "", nil)
+		return
+	}
+
+	// check for request id
+	if !functions.IsValidUUID(requestBody.RequestId) {
+		utils.Error(err, "SelectCityByName", "")
+		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
@@ -96,7 +111,14 @@ func (rh Semeru1RequestHandler) SelectCityByProvince(c *gin.Context) {
 	// check for error on parse request body
 	if err != nil {
 		utils.Error(err, "SelectCityByProvince", "")
-		c.JSON(http.StatusBadRequest, nil)
+		c.Data(http.StatusBadRequest, "", nil)
+		return
+	}
+
+	// check for request id
+	if !functions.IsValidUUID(requestBody.RequestId) {
+		utils.Error(err, "SelectCityByProvince", "")
+		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
@@ -126,7 +148,14 @@ func (rh Semeru1RequestHandler) SelectAllCity(c *gin.Context) {
 	// check for error on parse request body
 	if err != nil {
 		utils.Error(err, "SelectAllCity", "")
-		c.JSON(http.StatusBadRequest, nil)
+		c.Data(http.StatusBadRequest, "", nil)
+		return
+	}
+
+	// check for request id
+	if !functions.IsValidUUID(requestBody.RequestId) {
+		utils.Error(err, "SelectAllCity", "")
+		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
@@ -156,7 +185,14 @@ func (rh Semeru1RequestHandler) SelectProvinceById(c *gin.Context) {
 	// check for error on parse request body
 	if err != nil {
 		utils.Error(err, "SelectProvinceById", "")
-		c.JSON(http.StatusBadRequest, nil)
+		c.Data(http.StatusBadRequest, "", nil)
+		return
+	}
+
+	// check for request id
+	if !functions.IsValidUUID(requestBody.RequestId) {
+		utils.Error(err, "SelectProvinceById", "")
+		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
@@ -186,7 +222,14 @@ func (rh Semeru1RequestHandler) SelectAllProvince(c *gin.Context) {
 	// check for error on parse request body
 	if err != nil {
 		utils.Error(err, "SelectAllProvince", "")
-		c.JSON(http.StatusBadRequest, nil)
+		c.Data(http.StatusBadRequest, "", nil)
+		return
+	}
+
+	// check for request id
+	if !functions.IsValidUUID(requestBody.RequestId) {
+		utils.Error(err, "SelectAllProvince", "")
+		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 

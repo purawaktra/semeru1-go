@@ -29,7 +29,7 @@
           "city"
         ],
         "summary": "Get list city by given id",
-        "description": "TThis should be return only one city ya",
+        "description": "This should be return only one city ya",
         "operationId": "GetCityById",
         "security": [
           {"basicAuth":  []}

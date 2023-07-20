@@ -1,0 +1,202 @@
+{"time":"2023-07-18 17:02:26","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-18 17:02:27","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-18 17:02:27","message":"App Address = localhost:7716"}
+{"level":"warn","function":"CheckBasicAuth","message":"Basic auth not set","time":"2023-07-18 17:03:13"}
+{"level":"info","time":"2023-07-18 17:03:22","message":"Basic auth successful"}
+{"level":"info","time":"2023-07-18 17:03:22","message":"=== New Request ==="}
+{"level":"error","function":"SelectCityById","message":"","time":"2023-07-18 17:03:22"}
+{"level":"info","time":"2023-07-18 17:03:23","message":"Basic auth successful"}
+{"level":"info","time":"2023-07-18 17:03:23","message":"=== New Request ==="}
+{"level":"error","function":"SelectCityById","message":"","time":"2023-07-18 17:03:23"}
+{"level":"info","time":"2023-07-18 17:03:36","message":"Basic auth successful"}
+{"level":"info","time":"2023-07-18 17:03:36","message":"=== New Request ==="}
+{"level":"error","function":"SelectCityById","message":"","time":"2023-07-18 17:03:36"}
+{"level":"info","time":"2023-07-18 17:04:01","message":"Basic auth successful"}
+{"level":"info","time":"2023-07-18 17:04:01","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:04:01"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:04:01"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:04:01"}
+{"time":"2023-07-18 17:09:55","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-18 17:09:55","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-18 17:09:55","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-18 17:10:04","message":"Basic auth successful"}
+{"level":"info","time":"2023-07-18 17:10:04","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:10:04"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:10:04"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:10:04"}
+{"time":"2023-07-18 17:13:25","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-18 17:13:25","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-18 17:13:25","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-18 17:13:30","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:30"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:30"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:30"}
+{"level":"info","time":"2023-07-18 17:13:32","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:32"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:32"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:32"}
+{"level":"info","time":"2023-07-18 17:13:33","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:33"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:33"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:33"}
+{"level":"info","time":"2023-07-18 17:13:33","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:33"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:33"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:33"}
+{"level":"info","time":"2023-07-18 17:13:33","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:33"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:33"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:33"}
+{"level":"info","time":"2023-07-18 17:13:34","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:34"}
+{"level":"info","time":"2023-07-18 17:13:34","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:34"}
+{"level":"info","time":"2023-07-18 17:13:34","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:34"}
+{"level":"info","time":"2023-07-18 17:13:34","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:34"}
+{"level":"info","time":"2023-07-18 17:13:34","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:34"}
+{"level":"info","time":"2023-07-18 17:13:34","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:34"}
+{"level":"info","time":"2023-07-18 17:13:34","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:34"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:34"}
+{"level":"info","time":"2023-07-18 17:13:35","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:35"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:35"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:35"}
+{"level":"info","time":"2023-07-18 17:13:35","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 17:13:35"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 17:13:35"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 17:13:35"}
+{"time":"2023-07-18 18:05:56","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-18 18:05:56","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-18 18:05:56","message":"App Address = localhost:7716"}
+{"time":"2023-07-18 18:05:59","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-18 18:05:59","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-18 18:05:59","message":"App Address = localhost:7716"}
+{"level":"fatal","error":"listen tcp 127.0.0.1:7716: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.","function":"main","message":"","time":"2023-07-18 18:05:59"}
+{"time":"2023-07-18 18:06:37","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-18 18:06:37","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-18 18:06:37","message":"App Address = localhost:7716"}
+{"level":"info","time":"2023-07-18 18:06:46","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:46"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:46"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:46"}
+{"level":"info","time":"2023-07-18 18:06:48","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:48"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:48"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:48"}
+{"level":"info","time":"2023-07-18 18:06:48","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:48"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:48"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:48"}
+{"level":"info","time":"2023-07-18 18:06:48","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:48"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:48"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:48"}
+{"level":"info","time":"2023-07-18 18:06:49","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:49"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:49"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:49"}
+{"level":"info","time":"2023-07-18 18:06:49","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:49"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:49"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:49"}
+{"level":"info","time":"2023-07-18 18:06:49","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:49"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:49"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:49"}
+{"level":"info","time":"2023-07-18 18:06:49","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:49"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:49"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:49"}
+{"level":"info","time":"2023-07-18 18:06:49","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:49"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:49"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:49"}
+{"level":"info","time":"2023-07-18 18:06:49","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:49"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:49"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:49"}
+{"level":"info","time":"2023-07-18 18:06:50","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:50"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:50"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:50"}
+{"level":"info","time":"2023-07-18 18:06:50","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:50"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:50"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:50"}
+{"level":"info","time":"2023-07-18 18:06:50","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:50"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:50"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:50"}
+{"level":"info","time":"2023-07-18 18:06:50","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:50"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:50"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:50"}
+{"level":"info","time":"2023-07-18 18:06:50","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:50"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:50"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:50"}
+{"level":"info","time":"2023-07-18 18:06:50","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:50"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:50"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:50"}
+{"level":"info","time":"2023-07-18 18:06:51","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:51"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:51"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:51"}
+{"level":"info","time":"2023-07-18 18:06:51","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:51"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:51"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:51"}
+{"level":"info","time":"2023-07-18 18:06:52","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:52"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:52"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:52"}
+{"level":"info","time":"2023-07-18 18:06:54","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:54"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:54"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:54"}
+{"level":"info","time":"2023-07-18 18:06:54","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:54"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:54"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:54"}
+{"level":"info","time":"2023-07-18 18:06:54","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:54"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:54"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:54"}
+{"level":"info","time":"2023-07-18 18:06:55","message":"=== New Request ==="}
+{"level":"debug","function":"SelectCityById","message":{"request_id":"ca3a5fce-2323-4ca9-9fbc-36823e428772","data":{"city_id":1,"limit":1,"offset":0}},"time":"2023-07-18 18:06:55"}
+{"level":"debug","function":"SelectCityById","message":"=== New Query ===","time":"2023-07-18 18:06:55"}
+{"level":"debug","function":"SelectCityById","message":{"CityId":1,"Name":"","Province":0},"time":"2023-07-18 18:06:55"}
+{"time":"2023-07-18 18:18:11","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-18 18:18:11","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-18 18:18:11","message":"App Address = localhost:7716"}
+{"time":"2023-07-18 18:21:10","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-18 18:21:10","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-18 18:21:10","message":"App Address = localhost:7716"}
+{"time":"2023-07-18 18:22:53","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-18 18:22:53","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-18 18:22:53","message":"App Address = localhost:7716"}
+{"time":"2023-07-18 18:25:56","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-18 18:25:56","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-18 18:25:56","message":"App Address = localhost:7716"}
+{"time":"2023-07-18 18:30:11","message":"============= SEMERU1 RUNTIME STARTED ============="}
+{"time":"2023-07-18 18:30:11","message":"============= SEMERU1 ENGINE STARTING ============="}
+{"time":"2023-07-18 18:30:11","message":"App Address = localhost:7716"}
