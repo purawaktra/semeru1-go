@@ -1,12 +1,12 @@
 package entities
 
-type Cities struct {
+type City struct {
 	CityId   uint   `gorm:"primary_key"`
 	Name     string `gorm:"column:name"`
 	Province uint   `gorm:"column:province"`
 }
 
-type Provinces struct {
+type Province struct {
 	ProvinceId uint   `gorm:"primary_key"`
 	Name       string `gorm:"column:name"`
 }

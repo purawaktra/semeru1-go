@@ -17,13 +17,11 @@ func CreateSemeru1Router(engine *gin.Engine, rh Semeru1RequestHandler) Semeru1Ro
 	}
 }
 
-func (r Semeru1Router) Init(path string) {
+func (r *Semeru1Router) Init(path string) {
 	pathGroup := r.engine.Group(path, apmgin.Middleware(r.engine))
 	pathGroup.POST("/select/city/id", r.rh.SelectCityById)
 	pathGroup.POST("/select/city/name", r.rh.SelectCityByName)
-	pathGroup.POST("/select/city/province", r.rh.SelectCityByProvince)
-	pathGroup.POST("/select/city/all", r.rh.SelectAllCity)
-
+	pathGroup.POST("/select/city", r.rh.SelectAllCity)
 	pathGroup.POST("/select/province/id", r.rh.SelectProvinceById)
-	pathGroup.POST("/select/province/all", r.rh.SelectAllProvince)
+	pathGroup.POST("/select/province", r.rh.SelectAllProvince)
 }

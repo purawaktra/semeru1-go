@@ -1,12 +1,12 @@
 package modules
 
 type City struct {
-	CityId   uint   `json:"city_id"`
+	CityId   int    `json:"city_id"`
 	Name     string `json:"name"`
-	Province uint   `json:"province"`
+	Province int    `json:"province"`
 }
 
 type Province struct {
-	ProvinceId uint   `json:"province_id"`
+	ProvinceId int    `json:"province_id"`
 	Name       string `json:"name"`
 }

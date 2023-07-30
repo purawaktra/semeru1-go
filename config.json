@@ -2,6 +2,7 @@
   "app": {
     "name": "semeru1",
     "host": "localhost",
+    "code": "SMR1",
     "port": "7716",
     "environment": "development",
     "log": {

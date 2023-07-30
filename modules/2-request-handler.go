@@ -6,6 +6,8 @@ import (
 	"github.com/purawaktra/semeru1-go/functions"
 	"github.com/purawaktra/semeru1-go/utils"
 	"net/http"
+	"strconv"
+	"time"
 )
 
 type Semeru1RequestHandler struct {
@@ -18,233 +20,337 @@ func CreateSemeru1RequestHandler(ctrl Semeru1Controller) Semeru1RequestHandler {
 	}
 }
 
-type Semeru1RequestHandlerInterface interface {
-	SelectCityById(c *gin.Context)
-	SelectCityByName(c *gin.Context)
-	SelectCityByProvince(c *gin.Context)
-	SelectAllCity(c *gin.Context)
-	SelectProvinceById(c *gin.Context)
-	SelectAllProvince(c *gin.Context)
-}
-
-func (rh Semeru1RequestHandler) SelectCityById(c *gin.Context) {
+func (rh *Semeru1RequestHandler) SelectCityById(c *gin.Context) {
 	utils.Info("=== New Request ===")
+	// start timer
+	start := time.Now()
 
-	// parse request body to struct
-	var requestBody dto.Request
-	err := c.Bind(&requestBody)
-
-	// check for error on parse request body
+	// get header and check for err
+	var header dto.Header
+	err := c.BindHeader(&header)
 	if err != nil {
+		utils.Error(err, "SelectCityById", "")
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			"FH",
+			err.Error())
+		c.Data(http.StatusBadRequest, "", nil)
+		return
+	}
+
+	// check for request id
+	if !functions.IsValidUUID(header.RequestId) {
 		utils.Error(err, "SelectCityById", "")
 		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
-	// check for request id
-	if !functions.IsValidUUID(requestBody.RequestId) {
-		utils.Error(err, "SelectCityById", "")
-		c.Data(http.StatusBadRequest, "", nil)
-		return
-	}
-
-	// call controller for the city
-	utils.Debug("SelectCityById", requestBody)
-	response, err := rh.ctrl.SelectCityById(requestBody)
-
-	// check for error on call controller
+	// parse request body to struct and check err
+	bodyBytes, err := c.GetRawData()
 	if err != nil {
 		utils.Error(err, "SelectCityById", "")
-		c.JSON(http.StatusInternalServerError, response)
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			"FB",
+			err.Error())
+		c.Data(http.StatusBadRequest, "", nil)
+		return
+	}
+
+	// call controller for the city and check err
+	utils.Debug("SelectCityById", header)
+	data, err, code := rh.ctrl.SelectCityById(bodyBytes)
+	if err != nil {
+		utils.Error(err, "SelectCityById", "")
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			code,
+			err.Error())
+		c.Data(http.StatusInternalServerError, "", nil)
 		return
 	}
 
 	// create success return
-	c.JSON(http.StatusOK, response)
+	end := time.Now()
+	functions.SetBaseHeader(c,
+		header.RequestId,
+		strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+		code,
+		"Success")
+	c.JSON(http.StatusOK, data)
 	return
 }
 
-func (rh Semeru1RequestHandler) SelectCityByName(c *gin.Context) {
+func (rh *Semeru1RequestHandler) SelectCityByName(c *gin.Context) {
 	utils.Info("=== New Request ===")
+	// start timer
+	start := time.Now()
 
-	// parse request body to struct
-	var requestBody dto.Request
-	err := c.Bind(&requestBody)
-
-	// check for error on parse request body
+	// get header and check for err
+	var header dto.Header
+	err := c.BindHeader(&header)
 	if err != nil {
+		utils.Error(err, "SelectCityByName", "")
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			"FH",
+			err.Error())
+		c.Data(http.StatusBadRequest, "", nil)
+		return
+	}
+
+	// check for request id
+	if !functions.IsValidUUID(header.RequestId) {
 		utils.Error(err, "SelectCityByName", "")
 		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
-	// check for request id
-	if !functions.IsValidUUID(requestBody.RequestId) {
-		utils.Error(err, "SelectCityByName", "")
-		c.Data(http.StatusBadRequest, "", nil)
-		return
-	}
-
-	// call controller for the city
-	utils.Debug("SelectCityByName", requestBody)
-	response, err := rh.ctrl.SelectCityByName(requestBody)
-
-	// check for error on call controller
+	// parse request body to struct and check err
+	bodyBytes, err := c.GetRawData()
 	if err != nil {
 		utils.Error(err, "SelectCityByName", "")
-		c.JSON(http.StatusInternalServerError, response)
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			"FB",
+			err.Error())
+		c.Data(http.StatusBadRequest, "", nil)
+		return
+	}
+
+	// call controller for the city and check err
+	utils.Debug("SelectCityByName", header)
+	data, err, code := rh.ctrl.SelectCityByName(bodyBytes)
+	if err != nil {
+		utils.Error(err, "SelectCityByName", "")
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			code,
+			err.Error())
+		c.Data(http.StatusInternalServerError, "", nil)
 		return
 	}
 
 	// create success return
-	c.JSON(http.StatusOK, response)
+	end := time.Now()
+	functions.SetBaseHeader(c,
+		header.RequestId,
+		strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+		code,
+		"Success")
+	c.JSON(http.StatusOK, data)
 	return
 }
 
-func (rh Semeru1RequestHandler) SelectCityByProvince(c *gin.Context) {
+func (rh *Semeru1RequestHandler) SelectAllCity(c *gin.Context) {
 	utils.Info("=== New Request ===")
+	// start timer
+	start := time.Now()
 
-	// parse request body to struct
-	var requestBody dto.Request
-	err := c.Bind(&requestBody)
-
-	// check for error on parse request body
+	// get header and check for err
+	var header dto.Header
+	err := c.BindHeader(&header)
 	if err != nil {
-		utils.Error(err, "SelectCityByProvince", "")
+		utils.Error(err, "SelectAllCity", "")
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			"FH",
+			err.Error())
 		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
 	// check for request id
-	if !functions.IsValidUUID(requestBody.RequestId) {
-		utils.Error(err, "SelectCityByProvince", "")
-		c.Data(http.StatusBadRequest, "", nil)
-		return
-	}
-
-	// call controller for the city
-	utils.Debug("SelectCityByProvince", requestBody)
-	response, err := rh.ctrl.SelectCityByProvince(requestBody)
-
-	// check for error on call controller
-	if err != nil {
-		utils.Error(err, "SelectCityByProvince", "")
-		c.JSON(http.StatusInternalServerError, response)
-		return
-	}
-
-	// create success return
-	c.JSON(http.StatusOK, response)
-	return
-}
-
-func (rh Semeru1RequestHandler) SelectAllCity(c *gin.Context) {
-	utils.Info("=== New Request ===")
-
-	// parse request body to struct
-	var requestBody dto.Request
-	err := c.Bind(&requestBody)
-
-	// check for error on parse request body
-	if err != nil {
+	if !functions.IsValidUUID(header.RequestId) {
 		utils.Error(err, "SelectAllCity", "")
 		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
-	// check for request id
-	if !functions.IsValidUUID(requestBody.RequestId) {
+	// parse request body to struct and check err
+	bodyBytes, err := c.GetRawData()
+	if err != nil {
 		utils.Error(err, "SelectAllCity", "")
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			"FB",
+			err.Error())
 		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
-	// call controller for the city
-	utils.Debug("SelectAllCity", requestBody)
-	response, err := rh.ctrl.SelectAllCity(requestBody)
-
-	// check for error on call controller
+	// call controller for the city and check err
+	utils.Debug("SelectAllCity", header)
+	data, err, code := rh.ctrl.SelectAllCity(bodyBytes)
 	if err != nil {
 		utils.Error(err, "SelectAllCity", "")
-		c.JSON(http.StatusInternalServerError, response)
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			code,
+			err.Error())
+		c.Data(http.StatusInternalServerError, "", nil)
 		return
 	}
 
 	// create success return
-	c.JSON(http.StatusOK, response)
+	end := time.Now()
+	functions.SetBaseHeader(c,
+		header.RequestId,
+		strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+		code,
+		"Success")
+	c.JSON(http.StatusOK, data)
 	return
 }
 
-func (rh Semeru1RequestHandler) SelectProvinceById(c *gin.Context) {
+func (rh *Semeru1RequestHandler) SelectProvinceById(c *gin.Context) {
 	utils.Info("=== New Request ===")
+	// start timer
+	start := time.Now()
 
-	// parse request body to struct
-	var requestBody dto.Request
-	err := c.Bind(&requestBody)
-
-	// check for error on parse request body
+	// get header and check for err
+	var header dto.Header
+	err := c.BindHeader(&header)
 	if err != nil {
 		utils.Error(err, "SelectProvinceById", "")
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			"FH",
+			err.Error())
 		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
 	// check for request id
-	if !functions.IsValidUUID(requestBody.RequestId) {
+	if !functions.IsValidUUID(header.RequestId) {
 		utils.Error(err, "SelectProvinceById", "")
 		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
-	// call controller for the province
-	utils.Debug("SelectProvinceById", requestBody)
-	response, err := rh.ctrl.SelectProvinceById(requestBody)
-
-	// check for error on call controller
+	// parse request body to struct and check err
+	bodyBytes, err := c.GetRawData()
 	if err != nil {
 		utils.Error(err, "SelectProvinceById", "")
-		c.JSON(http.StatusInternalServerError, response)
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			"FB",
+			err.Error())
+		c.Data(http.StatusBadRequest, "", nil)
+		return
+	}
+
+	// call controller for the province and check err
+	utils.Debug("SelectProvinceById", header)
+	data, err, code := rh.ctrl.SelectProvinceById(bodyBytes)
+	if err != nil {
+		utils.Error(err, "SelectProvinceById", "")
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			code,
+			err.Error())
+		c.Data(http.StatusInternalServerError, "", nil)
 		return
 	}
 
 	// create success return
-	c.JSON(http.StatusOK, response)
+	end := time.Now()
+	functions.SetBaseHeader(c,
+		header.RequestId,
+		strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+		code,
+		"Success")
+	c.JSON(http.StatusOK, data)
 	return
 }
 
-func (rh Semeru1RequestHandler) SelectAllProvince(c *gin.Context) {
+func (rh *Semeru1RequestHandler) SelectAllProvince(c *gin.Context) {
 	utils.Info("=== New Request ===")
+	// start timer
+	start := time.Now()
 
-	// parse request body to struct
-	var requestBody dto.Request
-	err := c.Bind(&requestBody)
-
-	// check for error on parse request body
+	// get header and check for err
+	var header dto.Header
+	err := c.BindHeader(&header)
 	if err != nil {
 		utils.Error(err, "SelectAllProvince", "")
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			"FH",
+			err.Error())
 		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
 	// check for request id
-	if !functions.IsValidUUID(requestBody.RequestId) {
+	if !functions.IsValidUUID(header.RequestId) {
 		utils.Error(err, "SelectAllProvince", "")
 		c.Data(http.StatusBadRequest, "", nil)
 		return
 	}
 
-	// call controller for the province
-	utils.Debug("SelectAllProvince", requestBody)
-	response, err := rh.ctrl.SelectAllProvince(requestBody)
-
-	// check for error on call controller
+	// parse request body to struct and check err
+	bodyBytes, err := c.GetRawData()
 	if err != nil {
 		utils.Error(err, "SelectAllProvince", "")
-		c.JSON(http.StatusInternalServerError, response)
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			"FB",
+			err.Error())
+		c.Data(http.StatusBadRequest, "", nil)
+		return
+	}
+
+	// call controller for the province and check err
+	utils.Debug("SelectAllProvince", header)
+	data, err, code := rh.ctrl.SelectAllProvince(bodyBytes)
+	if err != nil {
+		utils.Error(err, "SelectAllProvince", "")
+		end := time.Now()
+		functions.SetBaseHeader(c,
+			header.RequestId,
+			strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+			code,
+			err.Error())
+		c.Data(http.StatusInternalServerError, "", nil)
 		return
 	}
 
 	// create success return
-	c.JSON(http.StatusOK, response)
+	end := time.Now()
+	functions.SetBaseHeader(c,
+		header.RequestId,
+		strconv.FormatInt(end.Sub(start).Microseconds(), 10),
+		code,
+		"Success")
+	c.JSON(http.StatusOK, data)
 	return
 }

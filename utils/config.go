@@ -8,6 +8,7 @@ import (
 var (
 	AppName        string
 	AppHost        string
+	AppCode        string
 	AppPort        string
 	AppEnvironment string
 	AppLogLevel    string
@@ -45,6 +46,7 @@ func InitConfig() {
 		// get variable for app
 		AppName = viper.GetString("app.name")
 		AppHost = viper.GetString("app.host")
+		AppCode = viper.GetString("app.code")
 		AppPort = viper.GetString("app.port")
 		AppEnvironment = viper.GetString("app.environment")
 		AppLogLevel = viper.GetString("app.log.level")
@@ -66,6 +68,7 @@ func InitConfig() {
 		// get variable for app
 		AppName = os.Getenv("APP_NAME")
 		AppPort = os.Getenv("APP_PORT")
+		AppCode = os.Getenv("APP_CODE")
 		AppEnvironment = os.Getenv("APP_ENV")
 		AppLogLevel = os.Getenv("APP_LOG_LEVEL")
 		AppAuthUsername = os.Getenv("APP_AUTH_USERNAME")

@@ -36,11 +36,14 @@
         ],
         "parameters": [
           {
-            "$ref": "#/components/parameters/xClientId"
+            "$ref": "#/components/parameters/Host"
+          },
+          {
+            "$ref": "#/components/parameters/RequestId"
           }
         ],
         "requestBody": {
-          "$ref": "#/components/requestBodies/Cities"
+          "$ref": "#/components/requestBodies/City"
         },
         "responses": {
           "200": {
@@ -48,33 +51,19 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ResponseSuccess"
+                  "$ref": "#/components/schemas/BodyCity"
                 }
               }
             }
           },
           "400": {
-            "description": "Check request, body not comply with request rules",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseError"
-                }
-              }
-            }
+            "description": "Check request, body not comply with request rules"
           },
           "401": {
             "description": "You are not permitted!"
           },
           "500": {
-            "description": "General error, system cannot tell you what wrongs",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseError"
-                }
-              }
-            }
+            "description": "General error, system cannot tell you what wrongs"
           }
         }
       }
@@ -92,11 +81,14 @@
         ],
         "parameters": [
           {
-            "$ref": "#/components/parameters/xClientId"
+            "$ref": "#/components/parameters/Host"
+          },
+          {
+            "$ref": "#/components/parameters/RequestId"
           }
         ],
         "requestBody": {
-          "$ref": "#/components/requestBodies/Cities"
+          "$ref": "#/components/requestBodies/City"
         },
         "responses": {
           "200": {
@@ -104,94 +96,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ResponseSuccess"
+                  "$ref": "#/components/schemas/BodyCity"
                 }
               }
             }
           },
           "400": {
-            "description": "Check request, body not comply with request rules",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseError"
-                }
-              }
-            }
+            "description": "Check request, body not comply with request rules"
           },
           "401": {
             "description": "You are not permitted!"
           },
           "500": {
-            "description": "General error, system cannot tell you what wrongs",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseError"
-                }
-              }
-            }
+            "description": "General error, system cannot tell you what wrongs"
           }
         }
       }
     },
-    "/select/city/province": {
-      "post": {
-        "tags": [
-          "city"
-        ],
-        "summary": "Get list city in certain province",
-        "description": "TThis should be return all city in given province",
-        "operationId": "GetCityByProvince",
-        "security": [
-          {"basicAuth":  []}
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/xClientId"
-          }
-        ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/Cities"
-        },
-        "responses": {
-          "200": {
-            "description": "GetCityByProvince success, with given request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseSuccess"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Check request, body not comply with request rules",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseError"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "You are not permitted!"
-          },
-          "500": {
-            "description": "General error, system cannot tell you what wrongs",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/select/city/all": {
+    "/select/city": {
       "post": {
         "tags": [
           "city"
@@ -204,11 +126,14 @@
         ],
         "parameters": [
           {
-            "$ref": "#/components/parameters/xClientId"
+            "$ref": "#/components/parameters/Host"
+          },
+          {
+            "$ref": "#/components/parameters/RequestId"
           }
         ],
         "requestBody": {
-          "$ref": "#/components/requestBodies/Cities"
+          "$ref": "#/components/requestBodies/City"
         },
         "responses": {
           "200": {
@@ -216,33 +141,19 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ResponseSuccess"
+                  "$ref": "#/components/schemas/BodyCity"
                 }
               }
             }
           },
           "400": {
-            "description": "Check request, body not comply with request rules",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseError"
-                }
-              }
-            }
+            "description": "Check request, body not comply with request rules"
           },
           "401": {
             "description": "You are not permitted!"
           },
           "500": {
-            "description": "General error, system cannot tell you what wrongs",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseError"
-                }
-              }
-            }
+            "description": "General error, system cannot tell you what wrongs"
           }
         }
       }
@@ -260,11 +171,14 @@
         ],
         "parameters": [
           {
-            "$ref": "#/components/parameters/xClientId"
+            "$ref": "#/components/parameters/Host"
+          },
+          {
+            "$ref": "#/components/parameters/RequestId"
           }
         ],
         "requestBody": {
-          "$ref": "#/components/requestBodies/Provinces"
+          "$ref": "#/components/requestBodies/Province"
         },
         "responses": {
           "200": {
@@ -272,38 +186,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ResponseSuccess"
+                  "$ref": "#/components/schemas/BodyProvince"
                 }
               }
             }
           },
           "400": {
-            "description": "Check request, body not comply with request rules",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseError"
-                }
-              }
-            }
+            "description": "Check request, body not comply with request rules"
           },
           "401": {
             "description": "You are not permitted!"
           },
           "500": {
-            "description": "General error, system cannot tell you what wrongs",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseError"
-                }
-              }
-            }
+            "description": "General error, system cannot tell you what wrongs"
           }
         }
       }
     },
-    "/select/province/all": {
+    "/select/province": {
       "post": {
         "tags": [
           "province"
@@ -316,11 +216,14 @@
         ],
         "parameters": [
           {
-            "$ref": "#/components/parameters/xClientId"
+            "$ref": "#/components/parameters/Host"
+          },
+          {
+            "$ref": "#/components/parameters/RequestId"
           }
         ],
         "requestBody": {
-          "$ref": "#/components/requestBodies/Provinces"
+          "$ref": "#/components/requestBodies/Province"
         },
         "responses": {
           "200": {
@@ -328,33 +231,19 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ResponseSuccess"
+                  "$ref": "#/components/schemas/BodyProvince"
                 }
               }
             }
           },
           "400": {
-            "description": "Check request, body not comply with request rules",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseError"
-                }
-              }
-            }
+            "description": "Check request, body not comply with request rules"
           },
           "401": {
             "description": "You are not permitted!"
           },
           "500": {
-            "description": "General error, system cannot tell you what wrongs",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseError"
-                }
-              }
-            }
+            "description": "General error, system cannot tell you what wrongs"
           }
         }
       }
@@ -367,169 +256,84 @@
   ],
   "components": {
     "requestBodies": {
-      "Cities": {
+      "City": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/RequestCity"
+              "$ref": "#/components/schemas/BodyCity"
             }
           }
         }
       },
-      "Provinces": {
+      "Province": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/RequestProvince"
+              "$ref": "#/components/schemas/BodyProvince"
             }
           }
         }
       }
     },
     "schemas": {
-      "RequestCity": {
+      "BodyCity": {
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "request_id": {
-            "type": "string",
-            "maxLength": 36,
-            "pattern": "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
+          "city_id": {
+            "type": "integer",
+            "format": "uint",
+            "maxLength": 3,
+            "minimum": 1
           },
-          "data": {
-            "type": "object",
-            "properties": {
-              "city_id": {
-                "type": "integer",
-                "format": "uint",
-                "maxLength": 3,
-                "minimum": 1
-              },
-              "city_name": {
-                "type": "string"
-              },
-              "city_province": {
-                "type": "integer",
-                "format": "uint",
-                "maxLength": 2
-              },
-              "limit": {
-                "type": "integer",
-                "format": "uint",
-                "minimum": 1,
-                "maxLength": 3
-              },
-              "offset": {
-                "type": "integer",
-                "format": "int",
-                "maxLength": 3
-              }
-            }
+          "city_name": {
+            "type": "string"
+          },
+          "city_province": {
+            "type": "integer",
+            "format": "uint",
+            "maxLength": 2
+          },
+          "limit": {
+            "type": "integer",
+            "format": "uint",
+            "minimum": 1,
+            "maxLength": 3
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int",
+            "maxLength": 3
           }
         }
       },
-      "RequestProvince": {
+      "BodyProvince": {
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "request_id": {
-            "type": "string",
-            "maxLength": 36,
-            "pattern": "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
+          "province_id": {
+            "type": "integer",
+            "maximum": 34,
+            "minimum": 1,
+            "format": "uint"
           },
-          "data": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "province_id": {
-                "type": "integer",
-                "maximum": 34,
-                "minimum": 1,
-                "format": "uint"
-              },
-              "province_name": {
-                "type": "string",
-                "maxLength": 64,
-                "format": "uint",
-                "pattern": "^[A-Za-z]$"
-              },
-              "limit": {
-                "type": "integer",
-                "maximum": 64,
-                "minimum": 1,
-                "format": "uint"
-              },
-              "offset": {
-                "type": "integer",
-                "format": "int"
-              }
-            }
-          }
-        }
-      },
-      "ResponseSuccess": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "response_id": {
-            "type": "string",
-            "maxLength": 36,
-            "pattern": "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
-          },
-          "request_id": {
-            "type": "string",
-            "maxLength": 36,
-            "pattern": "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
-          },
-          "success": {
-            "type": "boolean"
-          },
-          "response_time": {
+          "province_name": {
             "type": "string",
             "maxLength": 64,
-            "pattern": "^[0-9]$"
+            "format": "uint",
+            "pattern": "^[A-Za-z]$"
           },
-          "message": {
-            "type": "string",
-            "maxLength": 256,
-            "pattern": "^.$"
+          "limit": {
+            "type": "integer",
+            "maximum": 64,
+            "minimum": 1,
+            "format": "uint"
           },
-          "data": {
-            "type": "object",
-            "additionalProperties": true,
-            "maxProperties": 64
-          }
-        }
-      },
-      "ResponseError": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "response_id": {
-            "type": "string",
-            "maxLength": 36,
-            "pattern": "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
-
-          },
-          "request_id": {
-            "type": "string",
-            "maxLength": 36,
-            "pattern": "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
-          },
-          "success": {
-            "type": "boolean"
-          },
-          "response_time": {
-            "type": "string",
-            "maxLength": 64,
-            "pattern": "^[0-9]$"
-          },
-          "error": {
-            "type": "string",
-            "maxLength": 256,
-            "pattern": "^.$"
+          "offset": {
+            "type": "integer",
+            "format": "int"
           }
         }
       }
@@ -541,15 +345,25 @@
       }
     },
     "parameters": {
-      "xClientId": {
-        "name": "X-Client-ID",
+      "Host": {
+        "name": "host",
         "in": "header",
-        "description": "Custom Id that defines you as caller",
+        "description": "Id that defines you as host",
         "required": false,
         "schema": {
           "type": "string",
-          "maxLength": 32,
-          "pattern": "[A-Za-z0-9]{32}"
+          "maxLength": 5
+        }
+      },
+      "RequestId": {
+        "name": "request_id",
+        "in": "header",
+        "description": "Request id that accompanies, what else request",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "maxLength": 36,
+          "pattern": "[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}"
         }
       }
     }

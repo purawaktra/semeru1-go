@@ -17,127 +17,101 @@ func CreateSemeru1Repo(gorm *gorm.DB) Semeru1Repo {
 	}
 }
 
-type Semeru1RepoInterface interface {
-	SelectCityById(query entities.Cities, limit uint, offset uint) ([]entities.Cities, error)
-	SelectCityByName(query entities.Cities, limit uint, offset uint) ([]entities.Cities, error)
-	SelectCityByProvince(query entities.Cities, limit uint, offset uint) ([]entities.Cities, error)
-	SelectAllCity(limit uint, offset uint) ([]entities.Cities, error)
-	SelectProvinceById(query entities.Provinces, limit uint, offset uint) ([]entities.Provinces, error)
-	SelectAllProvince(limit uint, offset uint) ([]entities.Provinces, error)
-}
-
-func (sr Semeru1Repo) SelectCityById(query entities.Cities, limit uint, offset uint) ([]entities.Cities, error) {
-	utils.Debug("SelectCityById", "=== New Query ===")
+func (sr *Semeru1Repo) SelectCityById(query entities.City) (entities.City, error, string) {
 	utils.Debug("SelectCityById", query)
 
-	var cities = make([]entities.Cities, 0)
+	var city entities.City
 	tx := sr.db.Raw(
-		fmt.Sprint("SELECT * FROM cities WHERE city_id = ", query.CityId, " LIMIT ", limit, " OFFSET ", offset)).Scan(
-		&cities)
+		fmt.Sprint("SELECT city_id, name, province FROM cities WHERE city_id = ", query.CityId, " LIMIT 1 ")).Scan(
+		&city)
 	err := tx.Error
 	if err != nil {
 		utils.Error(err, "SelectCityById", query)
-		return nil, err
+		return entities.City{}, err, "DB"
 	}
-	return cities, nil
+	return city, nil, "00"
 }
 
-func (sr Semeru1Repo) SelectCityByName(query entities.Cities, limit uint, offset uint) ([]entities.Cities, error) {
-	utils.Debug("SelectCityByName", "=== New Query ===")
+func (sr *Semeru1Repo) SelectCityByName(query entities.City) (entities.City, error, string) {
 	utils.Debug("SelectCityByName", query)
 
-	var cities = make([]entities.Cities, 0)
+	var city entities.City
 	tx := sr.db.Raw(
-		fmt.Sprint("SELECT * FROM cities WHERE name LIKE \"", query.Name, "\" LIMIT ", limit, " OFFSET ", offset)).Scan(
-		&cities)
+		fmt.Sprint("SELECT city_id, name, province FROM cities WHERE name LIKE \"", query.Name, "\" LIMIT 1 ")).Scan(
+		&city)
 	err := tx.Error
 	if err != nil {
 		utils.Error(err, "SelectCityByName", query)
-		return nil, err
+		return entities.City{}, err, "DB"
 	}
-	return cities, nil
+	return city, nil, "00"
 }
 
-func (sr Semeru1Repo) SelectCityByProvince(query entities.Cities, limit uint, offset uint) ([]entities.Cities, error) {
-	utils.Debug("SelectCityByProvince", "=== New Query ===")
-	utils.Debug("SelectCityByProvince", query)
-
-	var cities = make([]entities.Cities, 0)
-	tx := sr.db.Raw(
-		fmt.Sprint("SELECT * FROM cities WHERE province = ", query.Province, " LIMIT ", limit, " OFFSET ", offset)).Scan(
-		&cities)
-	err := tx.Error
-	if err != nil {
-		utils.Error(err, "SelectCityByProvince", query)
-		return nil, err
-	}
-	return cities, nil
-}
-
-func (sr Semeru1Repo) SelectAllCity(limit uint, offset uint) ([]entities.Cities, error) {
-	utils.Debug("SelectAllCity", "=== New Query ===")
+func (sr *Semeru1Repo) SelectAllCity(limit uint, offset uint) ([]entities.City, error, string) {
 	utils.Debug("SelectAllCity", struct {
+		limit  uint
 		offset uint
-	}{offset: offset})
+	}{
+		limit:  limit,
+		offset: offset,
+	})
 
-	var cities = make([]entities.Cities, 0)
+	var cities = make([]entities.City, 0)
 	tx := sr.db.Raw(
-		fmt.Sprint("SELECT * FROM cities LIMIT ", limit, " OFFSET ", offset)).Scan(
+		fmt.Sprint("SELECT city_id, name, province FROM cities LIMIT ", limit, " OFFSET ", offset)).Scan(
 		&cities)
 	err := tx.Error
 	if err != nil {
 		utils.Error(err, "SelectAllCity", struct {
+			limit  uint
 			offset uint
-		}{offset: offset})
-		return nil, err
+		}{
+			limit:  limit,
+			offset: offset,
+		})
+		return nil, err, "DB"
 	}
-	return cities, nil
+	return cities, nil, "00"
 }
 
-func (sr Semeru1Repo) SelectProvinceById(query entities.Provinces, limit uint, offset uint) ([]entities.Provinces, error) {
-	utils.Debug("SelectProvinceById", "=== New Query ===")
-	utils.Debug("SelectProvinceById", struct {
-		provinces entities.Provinces
-		offset    uint
-	}{
-		provinces: query,
-		offset:    offset,
-	})
+func (sr *Semeru1Repo) SelectProvinceById(query entities.Province) (entities.Province, error, string) {
+	utils.Debug("SelectProvinceById", query)
 
-	var provinces = make([]entities.Provinces, 0)
+	var province entities.Province
 	tx := sr.db.Raw(
-		fmt.Sprint("SELECT * FROM provinces WHERE province_id = ", query.ProvinceId, " LIMIT ", limit, " OFFSET ", offset)).Scan(
-		&provinces)
+		fmt.Sprint("SELECT province_id, name FROM provinces WHERE province_id = ", query.ProvinceId, " LIMIT 1")).Scan(
+		&province)
 	err := tx.Error
 	if err != nil {
-		utils.Error(err, "SelectProvinceById", struct {
-			provinces entities.Provinces
-			offset    uint
-		}{
-			provinces: query,
-			offset:    offset,
-		})
-		return nil, err
+		utils.Error(err, "SelectProvinceById", query)
+		return entities.Province{}, err, "DB"
 	}
-	return provinces, nil
+	return province, nil, "00"
 }
 
-func (sr Semeru1Repo) SelectAllProvince(limit uint, offset uint) ([]entities.Provinces, error) {
-	utils.Debug("SelectAllProvince", "=== New Query ===")
+func (sr *Semeru1Repo) SelectAllProvince(limit uint, offset uint) ([]entities.Province, error, string) {
 	utils.Debug("SelectAllProvince", struct {
+		limit  uint
 		offset uint
-	}{offset: offset})
+	}{
+		limit:  limit,
+		offset: offset,
+	})
 
-	var provinces = make([]entities.Provinces, 0)
+	var provinces = make([]entities.Province, 0)
 	tx := sr.db.Raw(
-		fmt.Sprint("SELECT * FROM provinces LIMIT ", limit, " OFFSET ", offset)).Scan(
+		fmt.Sprint("SELECT province_id, name FROM provinces LIMIT ", limit, " OFFSET ", offset)).Scan(
 		&provinces)
 	err := tx.Error
 	if err != nil {
 		utils.Error(err, "SelectAllProvince", struct {
+			limit  uint
 			offset uint
-		}{offset: offset})
-		return nil, err
+		}{
+			limit:  limit,
+			offset: offset,
+		})
+		return nil, err, "DB"
 	}
-	return provinces, nil
+	return provinces, nil, "00"
 }

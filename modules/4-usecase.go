@@ -16,240 +16,148 @@ func CreateSemeru1Usecase(repo Semeru1Repo) Semeru1Usecase {
 	}
 }
 
-type Semeru1UsecaseInterface interface {
-	SelectCityById(id int, limit int, offset int) ([]City, error)
-	SelectCityByName(name string, limit int, offset int) ([]City, error)
-	SelectCityByProvince(provinceId int, limit int, offset int) ([]City, error)
-	SelectAllCity(limit int, offset int) ([]City, error)
-	SelectProvinceById(id int, limit int, offset int) ([]Province, error)
-	SelectAllProvince(limit int, offset int) ([]Province, error)
-}
-
-func (uc Semeru1Usecase) SelectCityById(id int, limit int, offset int) ([]City, error) {
-	// create check input on id and offset
-	if offset < 0 {
-		utils.Error(errors.New("offset can not be negative"), "SelectCityById", offset)
-		return nil, errors.New("offset can not be negative")
-	}
-
-	if limit < 1 {
-		utils.Error(errors.New("limit can not be zero or negative"), "SelectCityById", limit)
-		return nil, errors.New("limit can not be zero or negative")
-	}
-
-	if id < 1 {
-		utils.Error(errors.New("city id can not be zero or negative"), "SelectCityById", id)
-		return nil, errors.New("city id can not be zero or negative")
+func (uc *Semeru1Usecase) SelectCityById(query City) (City, error, string) {
+	// create check for city id
+	if query.CityId < 1 {
+		utils.Error(errors.New("city id can not be zero or negative"), "SelectCityById", query)
+		return City{}, errors.New("city id can not be zero or negative"), "FC"
 	}
 
 	// convert input to entity
-	city := entities.Cities{CityId: uint(id)}
+	entity := entities.City{CityId: uint(query.CityId)}
 
-	// call repo for the city
-	cities, err := uc.repo.SelectCityById(city, uint(limit), uint(offset))
-
-	// check for error on call repo
+	// call repo for the city and check err
+	city, err, code := uc.repo.SelectCityById(entity)
 	if err != nil {
 		utils.Error(errors.New("error call usecase"), "SelectCityById", city)
-		return nil, err
+		return City{}, err, code
 	}
 
 	// convert entity to dto
-	results := make([]City, 0)
-	for _, city := range cities {
-		results = append(results, City{
-			CityId:   city.CityId,
-			Name:     city.Name,
-			Province: city.Province,
-		})
+	result := City{
+		CityId:   int(city.CityId),
+		Name:     city.Name,
+		Province: int(city.Province),
 	}
 
 	// create return
-	return results, nil
+	return result, nil, code
 }
 
-func (uc Semeru1Usecase) SelectCityByName(name string, limit int, offset int) ([]City, error) {
-	// create check input on id and offset
-	if offset < 0 {
-		utils.Error(errors.New("offset can not be negative"), "SelectCityByName", offset)
-		return nil, errors.New("offset can not be negative")
-	}
-
-	if limit < 1 {
-		utils.Error(errors.New("limit can not be zero or negative"), "SelectCityByName", limit)
-		return nil, errors.New("limit can not be zero or negative")
-	}
-
-	if name == "" {
-		utils.Error(errors.New("city name can not be empty"), "SelectCityByName", name)
-		return nil, errors.New("city name can not be empty")
+func (uc *Semeru1Usecase) SelectCityByName(query City) (City, error, string) {
+	// create check input on name
+	if query.Name == "" {
+		utils.Error(errors.New("city name can not be empty"), "SelectCityByName", query)
+		return City{}, errors.New("city name can not be empty"), "FC"
 	}
 
 	// convert input to entity
-	city := entities.Cities{Name: name}
+	entity := entities.City{Name: query.Name}
 
-	// call repo for the city
-	cities, err := uc.repo.SelectCityByName(city, uint(limit), uint(offset))
-
-	// check for error on call usecase
+	// call repo for the city and check err
+	city, err, code := uc.repo.SelectCityByName(entity)
 	if err != nil {
 		utils.Error(errors.New("error call usecase"), "SelectCityByName", city)
-		return nil, err
+		return City{}, err, code
 	}
 
 	// convert entity to dto
-	results := make([]City, 0)
-	for _, city := range cities {
-		results = append(results, City{
-			CityId:   city.CityId,
-			Name:     city.Name,
-			Province: city.Province,
-		})
+	result := City{
+		CityId:   int(city.CityId),
+		Name:     city.Name,
+		Province: int(city.Province),
 	}
 
 	// create return
-	return results, nil
+	return result, nil, code
 }
 
-func (uc Semeru1Usecase) SelectCityByProvince(provinceId int, limit int, offset int) ([]City, error) {
-	// create check input on id and offset
-	if offset < 0 {
-		utils.Error(errors.New("offset can not be negative"), "SelectCityByProvince", offset)
-		return nil, errors.New("offset can not be negative")
-	}
-
-	if limit < 1 {
-		utils.Error(errors.New("limit can not be zero or negative"), "SelectCityByProvince", limit)
-		return nil, errors.New("limit can not be zero or negative")
-	}
-
-	if provinceId < 1 {
-		return nil, errors.New("province id can not be zero or negative")
-	}
-
-	// convert input to entity
-	city := entities.Cities{Province: uint(provinceId)}
-
-	// call repo for the city
-	cities, err := uc.repo.SelectCityByProvince(city, uint(limit), uint(offset))
-
-	// check for error on call usecase
-	if err != nil {
-		utils.Error(errors.New("error call usecase"), "SelectCityByProvince", city)
-		return nil, err
-	}
-
-	// convert entity to dto
-	results := make([]City, 0)
-	for _, city := range cities {
-		results = append(results, City{
-			CityId:   city.CityId,
-			Name:     city.Name,
-			Province: city.Province,
-		})
-	}
-
-	// create return
-	return results, nil
-}
-
-func (uc Semeru1Usecase) SelectAllCity(limit int, offset int) ([]City, error) {
-	// create check input on id and offset
+func (uc *Semeru1Usecase) SelectAllCity(limit int, offset int) ([]City, error, string) {
+	// create check input on limit and offset
 	if offset < 0 {
 		utils.Error(errors.New("offset can not be negative"), "SelectAllCity", offset)
-		return nil, errors.New("offset can not be negative")
+		return nil, errors.New("offset can not be negative"), "FC"
 	}
-
 	if limit < 1 {
 		utils.Error(errors.New("limit can not be zero or negative"), "SelectAllCity", limit)
-		return nil, errors.New("limit can not be zero or negative")
+		return nil, errors.New("limit can not be zero or negative"), "FC"
 	}
 
-	// call repo for the city
-	cities, err := uc.repo.SelectAllCity(uint(limit), uint(offset))
-
-	// check for error on call usecase
+	// call repo for the city and check err
+	cities, err, code := uc.repo.SelectAllCity(uint(limit), uint(offset))
 	if err != nil {
 		utils.Error(errors.New("error call usecase"), "SelectAllCity", "")
-		return nil, err
+		return nil, err, code
 	}
 
 	// convert entity to dto
 	results := make([]City, 0)
 	for _, city := range cities {
 		results = append(results, City{
-			CityId:   city.CityId,
+			CityId:   int(city.CityId),
 			Name:     city.Name,
-			Province: city.Province,
+			Province: int(city.Province),
 		})
 	}
 
 	// create return
-	return results, nil
+	return results, nil, code
 }
 
-func (uc Semeru1Usecase) SelectProvinceById(id int, limit int, offset int) ([]Province, error) {
-	// create check input on id and offset
-	if offset < 0 {
-		utils.Error(errors.New("offset can not be negative"), "SelectProvinceById", offset)
-		return nil, errors.New("offset can not be negative")
-	}
-
-	if id < 1 {
-		utils.Error(errors.New("city id can not be zero or negative"), "SelectProvinceById", id)
-		return nil, errors.New("province id can not be zero or negative")
+func (uc *Semeru1Usecase) SelectProvinceById(query Province) (Province, error, string) {
+	// create check input on id
+	if query.ProvinceId < 1 {
+		utils.Error(errors.New("city id can not be zero or negative"), "SelectProvinceById", query)
+		return Province{}, errors.New("province id can not be zero or negative"), "FC"
 	}
 
 	// convert input to entity
-	province := entities.Provinces{ProvinceId: uint(id)}
+	entity := entities.Province{ProvinceId: uint(query.ProvinceId)}
 
-	// call repo for the province
-	provinces, err := uc.repo.SelectProvinceById(province, uint(limit), uint(offset))
-
-	// check for error on call usecase
+	// call repo for the province and check err
+	province, err, code := uc.repo.SelectProvinceById(entity)
 	if err != nil {
-		utils.Error(errors.New("error call usecase"), "SelectProvinceById", province)
-		return nil, err
+		utils.Error(errors.New("error call usecase"), "SelectProvinceById", entity)
+		return Province{}, err, code
 	}
 
 	// convert entity to dto
-	results := make([]Province, 0)
-	for _, province := range provinces {
-		results = append(results, Province{
-			ProvinceId: province.ProvinceId,
-			Name:       province.Name,
-		})
+	result := Province{
+		ProvinceId: int(province.ProvinceId),
+		Name:       province.Name,
 	}
 
 	// create return
-	return results, nil
+	return result, nil, code
 }
 
-func (uc Semeru1Usecase) SelectAllProvince(limit int, offset int) ([]Province, error) {
-	// create check input on id and offset
+func (uc *Semeru1Usecase) SelectAllProvince(limit int, offset int) ([]Province, error, string) {
+	// create check input on limit and offset
 	if offset < 0 {
 		utils.Error(errors.New("offset can not be negative"), "SelectAllProvince", offset)
-		return nil, errors.New("offset can not be negative")
+		return nil, errors.New("offset can not be negative"), "FC"
+	}
+	if limit < 1 {
+		utils.Error(errors.New("limit can not be zero or negative"), "SelectAllProvince", limit)
+		return nil, errors.New("limit can not be zero or negative"), "FC"
 	}
 
-	// call repo for the province
-	provinces, err := uc.repo.SelectAllProvince(uint(limit), uint(offset))
-
-	// check for error on call usecase
+	// call repo for the province and check err
+	provinces, err, code := uc.repo.SelectAllProvince(uint(limit), uint(offset))
 	if err != nil {
 		utils.Error(errors.New("error call usecase"), "SelectAllProvince", "")
-		return nil, err
+		return nil, err, code
 	}
 
 	// convert entity to dto
 	results := make([]Province, 0)
 	for _, province := range provinces {
 		results = append(results, Province{
-			ProvinceId: province.ProvinceId,
+			ProvinceId: int(province.ProvinceId),
 			Name:       province.Name,
 		})
 	}
 
 	// create return
-	return results, nil
+	return results, nil, code
 }
